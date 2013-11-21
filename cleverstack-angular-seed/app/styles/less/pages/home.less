@@ -4,8 +4,8 @@
 
     .jumbotron {
 
-        /*background: #f7f7f7 url("../images/bg-purple-sky.jpg");*/
-        background: #313131 url(../images/bg-grey-squares.png) repeat;
+        /*background: #f7f7f7 url("../images/bgs/bg-purple-sky.jpg");*/
+        background: #313131 url(../images/bgs/bg-grey-squares.png) repeat;
 
         overflow: hidden;
         position: relative;
@@ -14,9 +14,6 @@
         text-align: center;
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
         background-size: cover;
-        -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
-        box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
 
         h1  {
 
@@ -138,17 +135,21 @@
 
         background-color: #1F1F1F;
         position: absolute;
-        top: 1.9em;
+        top: 2.3em;
         right: -3.7em;
         z-index: 2;
         display: block;
-        padding: .6em 3.5em;
+        padding: 0.2em 3.5em;
+        letter-spacing: 0.03em;
 
         .user-select(none);
         .rotate(45deg);
         /*.transition(all, 2s, ease-out);*/
+
+        -moz-box-shadow: 0 0 0 1px #1d212e inset,0 0 2px 1px #fff inset,0 0 1em #888;
+        -webkit-box-shadow: 0 0 0 1px #1d212e inset,0 0 2px 1px #fff inset,0 0 1em #888;
         box-shadow: 0 0 0 1px #1d212e inset,0 0 2px 1px #fff inset,0 0 1em #888;
-        .drop-shadow(0 0 0 1px #1d212e inset,0 0 2px 1px #fff inset,0 0 1em #888);
+        /*.drop-shadow(0 0 0 1px #1d212e inset,0 0 2px 1px #fff inset,0 0 1em #888);*/
 
         opacity: 0.8;
         &:hover {
