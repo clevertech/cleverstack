@@ -1,4 +1,3 @@
-cleverstack-demo
+Cleverstack.io Website & Demo
 ================
 
-Cleverstack.io Website &amp; Demo
