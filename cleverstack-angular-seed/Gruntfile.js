@@ -87,7 +87,7 @@ module.exports = function (grunt) {
           '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
           '{.tmp,<%= yeoman.app %>}/views/{,*/}*.html',
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
-          '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg}'
         ],
         tasks: ['livereload']
       },
@@ -124,6 +124,7 @@ module.exports = function (grunt) {
           middleware: function (connect) {
             return [
               mountFolder(connect, '.'),
+              mountFolder(connect, yeomanConfig.app),
               fallbackToTest(connect)
             ]
           }
@@ -187,14 +188,14 @@ module.exports = function (grunt) {
       }
     },
     useminPrepare: {
-      html: '<%= yeoman.app %>/index.html',
+      html: ['<%= yeoman.app %>/index.html'],
       options: {
         dest: '<%= yeoman.dist %>'
       }
     },
     usemin: {
       html: ['<%= yeoman.dist %>/index.html', '<%= yeoman.dist %>/views/**/*.html'],
-      css: ['<%= yeoman.dist %>/styles/**/*.css'],
+      css: ['<%= yeoman.dist %>/styles/*.css'],
       options: {
         dirs: ['<%= yeoman.dist %>']
       }
@@ -212,7 +213,7 @@ module.exports = function (grunt) {
     less: {
       development: {
         options: {
-          paths: ['app/styles']
+          paths: ['app/styles', 'app/components']
         },
         files: [
           { '<%= yeoman.app %>/styles/application.css': '<%= yeoman.app %>/styles/less/application.less' },
@@ -221,7 +222,7 @@ module.exports = function (grunt) {
       },
       production: {
         options: {
-          paths: ['app/styles']
+          paths: ['app/styles', 'app/components']
         },
         files: [
           { '<%= yeoman.app %>/styles/application.css': '<%= yeoman.app %>/styles/less/application.less' },
@@ -242,15 +243,16 @@ module.exports = function (grunt) {
     htmlmin: {
       dist: {
         options: {
-          /*removeCommentsFromCDATA: true,
+          //removeCommentsFromCDATA: true,
           // https://github.com/yeoman/grunt-usemin/issues/44
-          //collapseWhitespace: true,
-          collapseBooleanAttributes: true,
-          removeAttributeQuotes: true,
-          removeRedundantAttributes: true,
-          useShortDoctype: true,
-          removeEmptyAttributes: true,
-          removeOptionalTags: true*/
+          // collapseWhitespace: false,
+          // collapseBooleanAttributes: true,
+          // removeAttributeQuotes: true,
+          // removeRedundantAttributes: true,
+          // useShortDoctype: true,
+          // removeEmptyAttributes: true
+          // removeOptionalTags: true
+          // removeEmptyElements: true
         },
         files: [{
           expand: true,
@@ -302,7 +304,7 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg}',
             '<%= yeoman.dist %>/styles/fonts/*'
           ]
         }
@@ -319,8 +321,8 @@ module.exports = function (grunt) {
             '*.{ico,txt}',
             '.htaccess',
             'components/**/*.{js,css,eot,svg,ttf,woff,png,jpg,jpeg,gif,webp}',
-            'images/{,*/}*.{gif,webp, png}',
-            'images/**/*.{gif,webp, png}',
+            'images/{,*/}*.{js,css,eot,svg,ttf,woff,png,jpg,jpeg,gif,webp}',
+            'images/**/*.{js,css,eot,svg,ttf,woff,png,jpg,jpeg,gif,webp}',
             'styles/fonts/**/*',
             'fonts/**/*',
             'home/**/*'
@@ -332,7 +334,7 @@ module.exports = function (grunt) {
 
   grunt.renameTask('regarde', 'watch');
 
-  grunt.registerTask('docs', ['clean:docs','docular']);
+  grunt.registerTask('docs', ['docular']);
 
   grunt.registerTask('server', [
     'clean:server',
