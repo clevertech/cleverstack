@@ -1,0 +1,9 @@
+{
+	"odm": {
+	    "enabled": false,
+
+	    "models": [
+	        "Mongo"
+	    ]
+	}
+}

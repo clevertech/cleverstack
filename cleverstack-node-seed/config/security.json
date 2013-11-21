@@ -1,0 +1,19 @@
+{
+    "security":{
+        "xframe": {
+            "mode": "allow-from",
+            "from": "http://example.com"
+        },
+
+        "iexss": {
+        },
+
+        "contentTypeOptions": {
+        },
+
+        "cacheControl":{
+        }
+
+    }
+
+}

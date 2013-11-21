@@ -1,0 +1,12 @@
+
+<div id="container" ng-controller="User">
+
+    <p>You are currently logged in as: {{user.username}} ({{user.email}}).</p>
+
+    <h2>$scope.user =</h2>
+
+    <pre>{{ user | json }}</pre>
+
+    <a class="btn btn-large btn-primary" type="button" href="{{baseUrl}}:9000">Go to Home</a>
+
+</div>

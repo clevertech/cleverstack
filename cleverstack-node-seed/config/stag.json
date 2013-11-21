@@ -1,0 +1,10 @@
+{
+    "environmentName": "STAGE",
+
+	"background":{
+        "on" : true
+    ,   "tasks":[
+            {"name": "ExampleTask",    "masterOnly": true }
+        ]
+    }
+}

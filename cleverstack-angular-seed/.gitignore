@@ -1,0 +1,14 @@
+node_modules
+dist
+.tmp
+.sass-cache
+app/components
+test-results.xml
+.DS_Store
+docs/*
+libpeerconnection.log
+scripts/*.jar
+.browserstack.json
+scripts/bs-tunnel.sh
+/BrowserStackTunnel.jar
+/BrowserStackTunnel.jar.1

@@ -1,0 +1,30 @@
+<!--
+{
+    "id": 1,
+    "username": "admin",
+    "email": "admin@clevertech.biz",
+    "password": "7110eda4d09e062aa5e4a390b0a572ac0d2c0220",
+    "confirmed": true,
+    "active": true,
+    "hasAdminRight": true,
+    "accessedAt": "2013-11-18T13:34:23.000Z",
+    "createdAt": "2013-11-18T13:18:50.000Z",
+    "updatedAt": "2013-11-18T13:23:34.000Z",
+    "deletedAt": null
+}
+-->
+
+<div id="container" ng-controller="Users">
+
+    <p>There are currently:</p>
+    <ul>
+        <li>{{users.length}} registered users.</li>
+    </ul>
+
+    <h2>$scope.user =</h2>
+    <pre>{{ user | json }}</pre>
+
+    <h2>$scope.users =</h2>
+    <pre>{{ users | json }}</pre>
+
+</div>

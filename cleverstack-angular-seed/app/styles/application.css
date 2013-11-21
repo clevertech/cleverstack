@@ -1,0 +1,145 @@
+/* LESS Mixins */
+/* home.less */
+#home {
+  /* Github-Ribbon
+    -------------------------------------------------- */
+
+}
+#home .jumbotron {
+  /*background: #f7f7f7 url("../images/bg-purple-sky.jpg");*/
+
+  background: #313131 url(../images/bg-grey-squares.png) repeat;
+  overflow: hidden;
+  position: relative;
+  padding: 60px 0 40px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+  background-size: cover;
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.2), inset 0 -3px 7px rgba(0, 0, 0, 0.2);
+}
+#home .jumbotron h1 {
+  margin: 10px 0 10px 0;
+}
+#home .jumbotron h1,
+#home .jumbotron p {
+  color: #FFF;
+}
+#home .jumbotron a.home {
+  display: inline-block;
+}
+@media (max-width: 979px) {
+  #home .jumbotron {
+    background-position: 50% 20%;
+  }
+}
+#home .jumbotron:after {
+  opacity: .15;
+  background: none;
+}
+#home .cs-docs-social {
+  background: rgba(245, 245, 245, 0.15);
+  border-top: 1px solid rgba(245, 245, 245, 0.25);
+  border-bottom: 1px solid rgba(221, 221, 221, 0.25);
+  padding: 15px 0;
+  text-align: center;
+}
+#home ul.cs-docs-social-buttons {
+  margin: 0;
+  height: 36px;
+  overflow: hidden;
+}
+#home .cs-docs-social ul.cs-docs-social-buttons li {
+  padding: 5px 0px;
+}
+#home .cs-docs-social-buttons li {
+  display: inline-block;
+  line-height: 1;
+}
+#home .seeds-list a {
+  display: inline-block;
+  padding: 20px;
+}
+#home .col-md-6,
+#home .col-md-12 {
+  padding: 10px;
+}
+#home .border-wrap-me {
+  border: 1px solid #DDD;
+  padding: 15px 25px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+#home .border-wrap-me p {
+  text-align: left;
+}
+#home .border-wrap-me .btn {
+  margin-bottom: 5px;
+}
+#home .border-wrap-me a {
+  font-weight: bold;
+}
+#home .border-wrap-me.min-h {
+  min-height: 220px;
+}
+#home .border-wrap-me:hover {
+  border: 1px solid #797979;
+}
+#home .github-ribbon {
+  background-color: #1F1F1F;
+  position: absolute;
+  top: 1.9em;
+  right: -3.7em;
+  z-index: 2;
+  display: block;
+  padding: .6em 3.5em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  /*.transition(all, 2s, ease-out);*/
+
+  box-shadow: 0 0 0 1px #1d212e inset,0 0 2px 1px #fff inset,0 0 1em #888;
+  -webkit-box-shadow: 0 0 0 1px #1d212e inset 0 0 2px 1px #ffffff inset 0 0 1em #888888 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 0 1px #1d212e inset 0 0 2px 1px #ffffff inset 0 0 1em #888888 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 1px #1d212e inset 0 0 2px 1px #ffffff inset 0 0 1em #888888 0 rgba(0, 0, 0, 0.25);
+  opacity: 0.8;
+}
+#home .github-ribbon:hover {
+  opacity: 1;
+}
+#home .github-ribbon a {
+  font: bold 0.82em sans-serif;
+  text-align: center;
+  text-shadow: 1px -1px 8px rgba(0, 0, 0, 0.6);
+  color: #FF9732;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+@media (max-width: 480px) {
+  #home .github-ribbon {
+    display: none;
+  }
+}
+/* footer.less */
+footer {
+  margin-top: 40px;
+}

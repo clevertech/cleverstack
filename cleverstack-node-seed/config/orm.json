@@ -1,0 +1,13 @@
+{
+    "orm": {
+        "enabled": true,
+
+        "models": [
+            "User"
+        ],
+
+        "modelAssociations": {
+            "User": {}
+        }
+    }
+}

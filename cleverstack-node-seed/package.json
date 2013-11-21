@@ -1,0 +1,75 @@
+{
+  "name": "cleverstack-node-seed",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "start": "grunt",
+    "setup": "npm i; grunt db;"
+  },
+  "dependencies": {
+    "async": "",
+    "clever-controller": "",
+    "connect-redis": "~1.4.5",
+    "dehumanize-date": "",
+    "ejs": "",
+    "express": "",
+    "i": "",
+    "i18n": "",
+    "jasmine-node": "",
+    "memcached": "",
+    "moment": "",
+    "mysql": "*",
+    "nconf": "",
+    "passport": "*",
+    "passport-facebook": "",
+    "passport-local": "*",
+    "pg": "",
+    "q": "",
+    "sequelize": "",
+    "squel": "",
+    "supervisor": "",
+    "time": "",
+    "uberclass": "",
+    "underscore": "",
+    "vague-time": "~0.5.4",
+    "validator": "",
+    "matchdep": "~0.1.2",
+    "colors": "~0.6.1",
+    "mongoose": "~3.6.20",
+    "helmet": "~0.1.0",
+    "debug": "~0.7.2",
+    "sendgrid": "~0.3.1"
+  },
+  "author": {
+    "name": "Clevertech",
+    "email": "info@clevertech.biz",
+    "web": "http://www.clevertech.biz"
+  },
+  "collaborators": [
+    "Richard Gustin <richard@clevertech.biz>",
+    "Dmitry Bashkatov <dmitry@clevertech.biz>",
+    "Leandro Ostera <leostera@gmail.com>"
+  ],
+  "description": "",
+  "keywords": [
+    ""
+  ],
+  "main": "app.js",
+  "devDependencies": {
+    "grunt-contrib-watch": "",
+    "grunt-contrib-clean": "",
+    "grunt-contrib-jshint": "",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-mocha-test": "",
+    "grunt-nodemon": "",
+    "grunt-docular": "",
+    "matchdep": "",
+    "mocha": "",
+    "should": "",
+    "sinon": "",
+    "karma": "",
+    "supertest": "",
+    "grunt-concurrent": "~0.3.0",
+    "grunt-exec": "~0.4.2"
+  }
+}

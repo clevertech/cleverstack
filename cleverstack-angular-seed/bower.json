@@ -1,0 +1,37 @@
+{
+  "name": "app",
+  "author": {
+    "name": "Clevertech",
+    "email": "info@clevertech.biz",
+    "web": "http://www.clevertech.biz"
+  },
+  "collaborators": [
+    "Richard Gustin <richard@clevertech.biz>",
+    "Simon W. Jackson <simon@clevertech.biz>",
+    "Daniel Young <daniel@clevertech.biz>",
+    "Leandro Ostera <leostera@gmail.com>",
+    "Sam Deering <sam@clevertech.biz>"
+  ],
+  "version": "1.0",
+  "dependencies": {
+    "jquery": "*",
+    "es5-shim": "~2.0.8",
+    "angular-unstable": "*",
+    "angular-resource-unstable": "*",
+    "angular-http-auth": "https://github.com/witoldsz/angular-http-auth.git",
+    "underscore": "~1.4.4",
+    "async": "~0.2.5",
+    "bootstrap": "3.0.2",
+    "requirejs": "*"
+  },
+  "devDependencies": {
+    "sinon": "*",
+    "chai": "*",
+    "funcunit": "https://github.com/bitovi/funcunit.git",
+    "syn": "*",
+    "steal": "*",
+    "angular-mocks": "~1.0.5",
+    "angular-scenario": "~1.0.5",
+    "async": "~0.2.5"
+  }
+}

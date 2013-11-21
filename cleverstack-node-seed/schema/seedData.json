@@ -1,0 +1,36 @@
+{
+    "User": [
+        {
+            "username": "admin",
+            "email": "admin@clevertech.biz",
+            "password": "7110eda4d09e062aa5e4a390b0a572ac0d2c0220",
+            "confirmed": "true",
+            "active": "true",
+            "hasAdminRight": "true"
+        }
+        , {
+            "username": "user1",
+            "email": "user1@clevertech.biz",
+            "password": "7110eda4d09e062aa5e4a390b0a572ac0d2c0220",
+            "confirmed": "true",
+            "active": "true",
+            "hasAdminRight": "false"
+        }
+        , {
+            "username": "user2",
+            "email": "user2@clevertech.biz",
+            "password": "7110eda4d09e062aa5e4a390b0a572ac0d2c0220",
+            "confirmed": "true",
+            "active": "true",
+            "hasAdminRight": "false"
+        }
+        , {
+            "username": "user3",
+            "email": "user3@clevertech.biz",
+            "password": "7110eda4d09e062aa5e4a390b0a572ac0d2c0220",
+            "confirmed": "true",
+            "active": "true",
+            "hasAdminRight": "false"
+        }
+    ]
+}
