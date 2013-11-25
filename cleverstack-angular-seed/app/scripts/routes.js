@@ -52,6 +52,11 @@ define(['angular', 'app'], function (angular, app) {
         controller: 'Angular',
         public: true
       })
+      .when('/clevertech', {
+        templateUrl: t.view('clevertech'),
+        controller: 'Clevertech',
+        public: true
+      })
       .when('/error', {
         templateUrl: t.partial('error'),
         public: true

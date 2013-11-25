@@ -1,19 +1,42 @@
-<form id="registration" ng-submit="register()">
-    <div class="form-group">
-        <label>Username</label>
-        <input type="text" id="username" class="form-control" ng-model="credentials.username" placeholder="Enter email">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="Navbar">
+
+      <ul class="nav navbar-nav">
+        <li><a href="/"><strong>Cleverstack.io</strong></a></li>
+
+        <li ng-hide="user"><a href="/login">Login</a></li>
+        <li ng-hide="user" class="active"><a href="/register">Register</a></li>
+
+        <li ng-show="user"><a href="/dash">Dashboard</a></li>
+
+      </ul>
+
+</nav>
+
+
+<div id="register" class="navbar-body">
+
+    <div class="container">
+
+        <form role="form" id="registration" ng-submit="register()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" class="form-control" ng-model="credentials.username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" ng-model="credentials.password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="passwordConfirmation">Confirm Password</label>
+                <input type="password" id="passwordConfirmation" class="form-control" ng-model="credentials.passwordConfirmation" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" ng-model="credentials.email" placeholder="Email">
+            </div>
+            <button type="submit" class="btn btn-default">Register</button>
+        </form>
+
     </div>
-    <div class="form-group">
-        <label>Password</label>
-        <input type="password" id="password" class="form-control" ng-model="credentials.password" placeholder="Password">
-    </div>
-    <div class="form-group">
-        <label>Confirm Password</label>
-        <input type="password" id="passwordConfirmation" class="form-control" ng-model="credentials.passwordConfirmation" placeholder="Password">
-    </div>
-    <div class="form-group">
-        <label>Email</label>
-        <input type="email" id="email" class="form-control" ng-model="credentials.email" placeholder="Email">
-    </div>
-    <button type="submit" class="btn btn-default">Register</button>
-</form>
+
+</div>

@@ -46,6 +46,7 @@ require([
     'controllers/users',
     'controllers/node',
     'controllers/angular',
+    'controllers/clevertech',
 
     // Directives
     'directives/string-to-number',
