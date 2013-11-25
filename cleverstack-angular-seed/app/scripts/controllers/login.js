@@ -5,20 +5,20 @@ define(['app'], function (app) {
   , function ($scope, $auth, $location) {
 
     $scope.login = function () {
-      $auth.login($scope.credentials);
+        $auth.login($scope.credentials);
     }
 
     $scope.$on('$auth:loginSuccess', function (event, data) {
-      console.log("LoginController:",event,data);
-      $location.path('/user');
+        console.log("LoginController:",event,data);
     });
 
     $scope.$on('$auth:loginFailure', function (event, data) {
-      console.log("LoginController:",event,data);
-      if(data === '403') {
-        alert('Invalid username/password');
-      }
+        console.log("LoginController:",event,data);
+        if(data === '403') {
+          alert('Invalid username/password');
+        }
     });
+
   }]);
 
 });

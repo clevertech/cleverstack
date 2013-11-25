@@ -1,3 +1,12 @@
+body,
+#main,
+header,
+footer {
+  min-width: 320px;
+}
+#main {
+  margin-top: 50px;
+}
 /* home.less */
 #home {
   /* Github-Ribbon
@@ -10,7 +19,7 @@
   background: #313131 url(../images/bgs/bg-grey-squares.png) repeat;
   overflow: hidden;
   position: relative;
-  padding: 60px 0 40px;
+  padding: 40px 0 40px;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
@@ -53,20 +62,6 @@
 #home .cs-docs-social-buttons li {
   display: inline-block;
   line-height: 1;
-}
-#home .seeds-list a {
-  display: inline-block;
-  border: 1px solid #FFF;
-  padding: 20px;
-}
-#home .seeds-list a:hover {
-  border: 1px solid #DDD;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  border-radius: 12px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
 }
 #home .col-md-6,
 #home .col-md-12 {
@@ -128,7 +123,7 @@
   position: absolute;
   top: 2.3em;
   right: -3.7em;
-  z-index: 2;
+  z-index: 9999;
   display: block;
   padding: 0.2em 3.5em;
   letter-spacing: 0.03em;
@@ -178,10 +173,6 @@ header .glyphicon-arrow-left {
 footer {
   margin-top: 40px;
 }
-/* for pages with navbar */
-.navbar-body {
-  padding-top: 90px;
-}
 .tasks .task {
   border: 1px solid #DDD;
   padding: 15px 25px;
@@ -189,6 +180,7 @@ footer {
 
   min-height: 200px;
   text-align: left;
+  margin-bottom: 15px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
@@ -224,3 +216,23 @@ footer {
   padding: 0 25px 25px 25px;
 }
 /* LESS Mixins */
+.seeds-list a {
+  display: inline-block;
+  border: 1px solid #FFF;
+  padding: 20px;
+}
+.seeds-list a:hover {
+  border: 1px solid #DDD;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.back-btn {
+  font-size: 3em;
+}
+.navbar-body {
+  padding-top: 30px;
+}

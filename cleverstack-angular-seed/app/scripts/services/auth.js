@@ -185,7 +185,7 @@ define(['angular', 'app'], function (angular, app) {
               $location.path($location.search().redirect);
               $location.search(false);
             } else {
-              $location.path('/');
+              $location.path('/dashboard');
             }
           };
 
@@ -218,11 +218,16 @@ define(['angular', 'app'], function (angular, app) {
               console.log("$auth:",next, "is", route.public ? "public" : "private");
               if(route && !route.public) {
                 $rootScope.$broadcast('$auth:loginStart');
-                debugger;
+                // debugger;
                 handlers.loginStart(next.substr(1));
               }
             } else {
               console.log("$auth: proceeding to load", next);
+
+              //if logged in and login/register redirect to dash
+              if(next=="/login" || next=="/register") {
+                  $location.path('/dashboard');
+              }
             }
           };
 

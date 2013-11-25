@@ -42,20 +42,21 @@ define(['angular', 'app'], function (angular, app) {
         controller: 'Registration',
         public: true
       })
+      .when('/dashboard', {
+        templateUrl: t.view('dashboard'),
+        controller: 'Dashboard'
+      })
       .when('/node', {
         templateUrl: t.view('node'),
-        controller: 'Node',
-        public: true
+        controller: 'Node'
       })
       .when('/angular', {
         templateUrl: t.view('angular'),
-        controller: 'Angular',
-        public: true
+        controller: 'Angular'
       })
       .when('/clevertech', {
         templateUrl: t.view('clevertech'),
-        controller: 'Clevertech',
-        public: true
+        controller: 'Clevertech'
       })
       .when('/error', {
         templateUrl: t.partial('error'),

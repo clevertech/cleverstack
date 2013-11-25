@@ -7,6 +7,7 @@ require.config({
     underscore: '../components/underscore/underscore',
     ngResource: '../components/angular-resource-unstable/angular-resource',
     'http-auth-interceptor': '../components/angular-http-auth/src/http-auth-interceptor',
+    bootstrap: '../components/bootstrap/dist/js/bootstrap'
   },
   shim: {
     angular: {
@@ -20,6 +21,10 @@ require.config({
     ngResource: {
       deps: ['angular','jquery']
     },
+
+    bootstrap: {
+      deps: ['jquery']
+    }
   }
 });
 
@@ -42,6 +47,7 @@ require([
     'controllers/logout',
     'controllers/forgot',
     'controllers/registration',
+    'controllers/dashboard',
     'controllers/user',
     'controllers/users',
     'controllers/node',
@@ -63,6 +69,10 @@ require([
     'services/browser-detect',
     'services/resource-factory',
     'services/auth',
+
+    // Bootstrap
+    'bootstrap'
+
   ], function (angular) {
   'use strict';
 
