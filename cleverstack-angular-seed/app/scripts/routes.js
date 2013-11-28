@@ -38,8 +38,8 @@ define(['angular', 'app'], function (angular, app) {
         public: true
       })
       .when('/register', {
-        templateUrl: t.view('registration'),
-        controller: 'Registration',
+        templateUrl: t.view('register'),
+        controller: 'Register',
         public: true
       })
       .when('/dashboard', {

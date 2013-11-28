@@ -230,9 +230,54 @@ footer {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
+form {
+  padding-top: 25px;
+}
+form input.ng-invalid.ng-dirty {
+  border: 1px solid red;
+}
+form input.ng-valid {
+  border: 1px solid green;
+}
+form span.error {
+  padding: 5px;
+  display: inline-block;
+  font-size: 0.8em;
+  color: red;
+}
+form.submitted input.ng-invalid {
+  border: 1px solid red;
+}
 .back-btn {
   font-size: 3em;
 }
 .navbar-body {
   padding-top: 30px;
+}
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.rotating {
+  float: right;
+  position: relative;
+  top: -24px;
+  right: 10px;
+  -webkit-animation: rotating 1s linear infinite;
+}
+.floating {
+  float: right;
+  position: relative;
+  top: -24px;
+  right: 10px;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
 }

@@ -121,8 +121,8 @@ define(['angular', 'app'], function (angular, app) {
         loginSuccess: null,
         logoutSuccess: null,
         locationChange: null,
-        registrationSuccess: null,
-        registrationFailure: null
+        registerSuccess: null,
+        registerFailure: null
       };
 
       /**
@@ -342,9 +342,9 @@ define(['angular', 'app'], function (angular, app) {
             register: function (credentials) {
               return userService.register(credentials)
                 .then(function(response){
-                  return handlers.registrationSuccess(response, currentUser);
+                  return handlers.registerSuccess(response, currentUser);
                 }, function(response){
-                  return handlers.registrationFailure(response.data, currentUser);
+                  return handlers.registerFailure(response.data, currentUser);
                 });
             },
 

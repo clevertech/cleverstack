@@ -1,31 +1,31 @@
 require.config({
-  baseUrl: './scripts',
-  paths: {
-    angular: '../components/angular-unstable/angular',
-    async: '../components/async/lib/async',
-    jquery: '../components/jquery/jquery',
-    underscore: '../components/underscore/underscore',
-    ngResource: '../components/angular-resource-unstable/angular-resource',
-    'http-auth-interceptor': '../components/angular-http-auth/src/http-auth-interceptor',
-    bootstrap: '../components/bootstrap/dist/js/bootstrap'
-  },
-  shim: {
-    angular: {
-      exports: 'angular'
+    baseUrl: './scripts',
+    paths: {
+        angular: '../components/angular-unstable/angular',
+        async: '../components/async/lib/async',
+        jquery: '../components/jquery/jquery',
+        underscore: '../components/underscore/underscore',
+        ngResource: '../components/angular-resource-unstable/angular-resource',
+        'http-auth-interceptor': '../components/angular-http-auth/src/http-auth-interceptor',
+        bootstrap: '../components/bootstrap/dist/js/bootstrap'
     },
+    shim: {
+        angular: {
+            exports: 'angular'
+        },
 
-    'http-auth-interceptor': {
-      deps: ['angular']
-    },
+        'http-auth-interceptor': {
+            deps: ['angular']
+        },
 
-    ngResource: {
-      deps: ['angular','jquery']
-    },
+        ngResource: {
+            deps: ['angular', 'jquery']
+        },
 
-    bootstrap: {
-      deps: ['jquery']
+        bootstrap: {
+            deps: ['jquery']
+        }
     }
-  }
 });
 
 require([
@@ -46,7 +46,7 @@ require([
     'controllers/login',
     'controllers/logout',
     'controllers/forgot',
-    'controllers/registration',
+    'controllers/register',
     'controllers/dashboard',
     'controllers/user',
     'controllers/users',
@@ -57,6 +57,8 @@ require([
     // Directives
     'directives/string-to-number',
     'directives/navbar',
+    'directives/pwcheck',
+    'directives/ngUnique',
 
     // Filters
     'filters/starts-with',
@@ -73,10 +75,10 @@ require([
     // Bootstrap
     'bootstrap'
 
-  ], function (angular) {
-  'use strict';
+], function(angular) {
+    'use strict';
 
-  angular.element(document).ready(function () {
-    angular.bootstrap(document, ['app']);
-  });
+    angular.element(document).ready(function() {
+        angular.bootstrap(document, ['app']);
+    });
 });
