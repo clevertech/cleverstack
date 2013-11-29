@@ -76,7 +76,7 @@ module.exports = function(UserService) {
                 return;
             }
 
-            console.log("Checking if " + uEmail + "...");
+            console.log("Checking new registrant " + uEmail + "...");
             UserService.emailExists(uEmail)
                 .then(function(user) {
                     if (!user) {
