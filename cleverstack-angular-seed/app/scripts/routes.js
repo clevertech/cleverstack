@@ -58,6 +58,53 @@ define(['angular', 'app'], function (angular, app) {
         templateUrl: t.view('clevertech'),
         controller: 'Clevertech'
       })
+      .when('/chat', {
+        templateUrl: t.view('chat'),
+        controller: 'Chat'
+      })
+      .when('/stats', {
+        templateUrl: t.view('stats'),
+        controller: 'Stats'
+      })
+
+      //node seed
+      .when('/node/grunt', {
+        templateUrl: t.view('node/grunt'),
+        controller: 'node'
+      })
+      .when('/node/backgroundtasks', {
+        templateUrl: t.view('node/backgroundtasks'),
+        controller: 'node'
+      })
+      .when('/node/tests', {
+        templateUrl: t.view('node/tests'),
+        controller: 'node'
+      })
+      .when('/node/deployment', {
+        templateUrl: t.view('node/deployment'),
+        controller: 'node'
+      })
+
+      //angular seed
+      .when('/angular/grunt', {
+        templateUrl: t.view('angular/grunt'),
+        controller: 'angular'
+      })
+      .when('/angular/deployment', {
+        templateUrl: t.view('angular/deployment'),
+        controller: 'angular'
+      })
+
+      //clevertech
+      .when('/clevertech/modularity', {
+        templateUrl: t.view('clevertech/modularity'),
+        controller: 'clevertech'
+      })
+      .when('/clevertech/cli', {
+        templateUrl: t.view('clevertech/cli'),
+        controller: 'clevertech'
+      })
+
       .when('/error', {
         templateUrl: t.partial('error'),
         public: true

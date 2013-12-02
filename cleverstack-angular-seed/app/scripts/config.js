@@ -8,7 +8,8 @@ define(['angular', 'app'], function (angular, app) {
 
     // $httpOptionsProvider can be configured, refer to its documentation
     // $httpOptionsProvider.setDomain('http://localhost:8080');
-    $httpOptionsProvider.setDomain('http://162.243.69.108:8080');
+    // $httpOptionsProvider.setDomain('http://162.243.69.108:8080');
+    $httpOptionsProvider.setDomain(window.location.protocol+"//"+window.location.hostname+':8080');
 
     // $authProvider can be configured, refer to its documentation
     // $authProvider.setUserService('UserService');

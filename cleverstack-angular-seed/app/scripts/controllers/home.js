@@ -24,8 +24,5 @@ define(['app'], function (app) {
             }
         });
 
-        // update demo links
-        $scope.baseUrl = window.location.protocol+"//"+window.location.hostname;
-
   }]);
 });

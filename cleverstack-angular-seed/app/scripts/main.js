@@ -53,6 +53,8 @@ require([
     'controllers/node',
     'controllers/angular',
     'controllers/clevertech',
+    'controllers/chat',
+    'controllers/stats',
 
     // Directives
     'directives/string-to-number',
