@@ -318,8 +318,10 @@ module.exports = function(db, UserModel, config) {
             delete values.password;
             delete values.confirmed;
             delete values.active;
+            delete values.hasAdminRight;
             delete values.updatedAt;
             delete values.deletedAt;
+            delete values.email;
 
             // parse date/time properties
             values.accessedAt = (values.accessedAt !== null) ? moment(values.accessedAt).format('MMMM Do YYYY, h:mm:ss a') : values.accessedAt;

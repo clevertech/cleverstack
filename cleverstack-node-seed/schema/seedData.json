@@ -1,6 +1,20 @@
 {
     "User": [
         {
+            "username": "sam",
+            "email": "samdeering@hotmail.com",
+            "password": "7110eda4d09e062aa5e4a390b0a572ac0d2c0220",
+            "confirmed": "true",
+            "active": "true",
+            "hasAdminRight": "true"
+        }, {
+            "username": "sam2",
+            "email": "samdeering@gmail.com",
+            "password": "7110eda4d09e062aa5e4a390b0a572ac0d2c0220",
+            "confirmed": "true",
+            "active": "true",
+            "hasAdminRight": "true"
+        }, {
             "username": "admin",
             "email": "admin@clevertech.biz",
             "password": "7110eda4d09e062aa5e4a390b0a572ac0d2c0220",

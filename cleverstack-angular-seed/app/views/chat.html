@@ -1,5 +1,3 @@
-
-
 <div id="chat" class="navbar-body">
 
     <div class="container">
@@ -9,9 +7,48 @@
 
                 <h1>Chat</h1>
 
-                <p>Example of NodeJS chat using Cleverstack.</p>
+                <p>Example of Cleverstack Seeds using Angular, Node & Socket.io to provide live chat.</p>
 
-                <p>coming soon...</p>
+                <div class="col-md-3 well">
+
+                    <h3>Users Online</h3>
+                    <div id="user-list">
+                        <ul>
+                            <li data-ng-repeat="u in users | orderBy:'username' | currentUserToTop:user.id" ng-class="{online:u.online}">
+                                {{u.username}}
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-md-9 well">
+
+                    <h3>Live Chat</h3>
+                    <div id="message-list">
+                        <ul>
+                            <li ng-repeat="m in messages">
+                                 <span class="time">{{ m.id | date:"MM/dd/yyyy hh:mm:ss" }}</span> |
+                                 <span class="user">{{ m.user }}</span> >
+                                 <span class="text">{{ m.text }}</span>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+                        <form ng-submit="send()">
+                            <div class="col-md-12">
+                                <textarea rows="2" ng-model="message" placeholder="Type your message" min-length="3"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" ng-disabled="message.length < 3" class="btn btn-primary pull-right" ng-click="newMsg()">
+                                <span class="glyphicon glyphicon-share-alt"></span>&nbsp;Share</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
 
             </div>
 

@@ -7,7 +7,8 @@ require.config({
         underscore: '../components/underscore/underscore',
         ngResource: '../components/angular-resource-unstable/angular-resource',
         'http-auth-interceptor': '../components/angular-http-auth/src/http-auth-interceptor',
-        bootstrap: '../components/bootstrap/dist/js/bootstrap'
+        bootstrap: '../components/bootstrap/dist/js/bootstrap',
+        socketio: '../components/socket.io-client/dist/socket.io'
     },
     shim: {
         angular: {
@@ -24,6 +25,10 @@ require.config({
 
         bootstrap: {
             deps: ['jquery']
+        },
+
+        socketio: {
+            exports: 'io'
         }
     }
 });
@@ -32,6 +37,7 @@ require([
     'angular',
     'ngResource',
     'http-auth-interceptor',
+    'socketio',
 
     // Init
     'app',
@@ -64,6 +70,7 @@ require([
 
     // Filters
     'filters/starts-with',
+    'filters/currentUserToTop',
 
     // Services
     'services/debug',

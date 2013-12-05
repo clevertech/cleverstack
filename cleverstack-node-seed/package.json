@@ -39,7 +39,8 @@
         "mongoose": "~3.6.20",
         "helmet": "~0.1.0",
         "debug": "~0.7.2",
-        "sendgrid": "~0.3.1"
+        "sendgrid": "~0.3.1",
+        "socket.io": "~0.9.16"
     },
     "author": {
         "name": "Clevertech",

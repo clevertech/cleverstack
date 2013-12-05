@@ -1,12 +1,20 @@
 
-<div id="container" ng-controller="User">
+<div id="chat" class="navbar-body" ng-controller="User">
 
-    <p>You are currently logged in as: {{user.username}} ({{user.email}}).</p>
+    <div class="container">
 
-    <h2>$scope.user =</h2>
+        <div class="row">
+            <div class="col-md-12">
 
-    <pre>{{ user | json }}</pre>
+                <p>You are currently logged in as: {{user.username}} ({{user.email}}).</p>
 
-    <a class="btn btn-large btn-primary" type="button" href="{{baseUrl}}:9000">Go to Home</a>
+                <h2>$scope.user =</h2>
+
+                <pre>{{ user | json }}</pre>
+
+            </div>
+        </div>
+
+    </div>
 
 </div>

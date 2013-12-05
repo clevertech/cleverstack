@@ -237,7 +237,7 @@ define(['angular', 'app'], function (angular, app) {
            */
           $rootScope.$on('$locationChangeStart', function (event, next, current) {
             if(!$route.current) {
-              console.log("$auth: Welcome newcomer!");
+              // console.log("$auth: Welcome newcomer!");
               console.log("$auth: Checking your session...");
               userService.getCurrentUser().then(function (user) {
                 currentUser = user;

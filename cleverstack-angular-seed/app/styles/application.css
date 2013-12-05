@@ -163,6 +163,35 @@ footer {
     display: none;
   }
 }
+#chat #message-list {
+  width: 100%;
+  min-height: 400px;
+  background: #FFF;
+  padding: 15px;
+}
+#chat #message-list ul {
+  margin: 0;
+  padding: 0;
+}
+#chat #message-list ul li {
+  list-style: none;
+}
+#chat textarea {
+  width: 100%;
+}
+#chat #user-list ul {
+  margin: 0;
+  padding: 0;
+}
+#chat #user-list ul li {
+  list-style: none;
+  padding: 0 5px;
+  border-left: 4px solid transparent;
+  margin-bottom: 5px;
+}
+#chat #user-list ul li.online {
+  border-left-color: #25DB25;
+}
 /* header.less */
 header .glyphicon-arrow-left {
   font-size: 60px;

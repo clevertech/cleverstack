@@ -1,0 +1,52 @@
+<div id="chat" class="navbar-body" ng-controller="Chat">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <h1>Chat</h1>
+
+                <p>Example of Cleverstack Seeds using Socket.io to provide live chat.</p>
+
+                <div class="col-md-3 well">
+
+                    <h3>Users Online</h3>
+
+                    {{ user.username }}
+
+                    <ul>
+                        <!-- <li ng-repeat="u in users | orderBy:u.username"> -->
+                        <li ng-repeat="u in users">
+                            {{ u.username }}
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-9 well">
+
+                    <h3>Live Chat</h3>
+                    <div id="messages" ng-model="messages"></div>
+
+                    <div class="row">
+                        <form ng-submit="send()">
+                            <div class="col-md-12">
+                                <textarea rows="2" ng-model="text" placeholder="Type your message"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" ng-disabled="text.length &lt; 3" class="btn btn-primary pull-right" ng-click="apply()">
+                                <span class="glyphicon glyphicon-share-alt"></span>&nbsp;Share</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

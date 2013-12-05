@@ -92,12 +92,23 @@ module.exports = function (grunt) {
         tasks: ['livereload']
       },
       less: {
+        options: {
+          force: true
+        },
         files: [
           '<%= yeoman.app %>/components/bootstrap/less/{,*/}*.less',
           '<%= yeoman.app %>/styles/less/{,*/}*.less'
         ],
         tasks: ['less']
-      },
+      }
+      // scripts: {
+      //   files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+      //   tasks: ['jshint'],
+      //   options: {
+      //     spawn: false,
+      //     force: true
+      //   },
+      // }
     },
     connect: {
       options: {
@@ -170,7 +181,8 @@ module.exports = function (grunt) {
     },
     jshint: {
       options: {
-        jshintrc: '.jshintrc'
+        jshintrc: '.jshintrc',
+        force: true
       },
       all: [
         'Gruntfile.js',

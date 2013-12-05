@@ -60,7 +60,7 @@ define(['angular', 'app'], function (angular, app) {
       })
       .when('/chat', {
         templateUrl: t.view('chat'),
-        controller: 'Chat'
+        controller: 'ChatCtrl'
       })
       .when('/stats', {
         templateUrl: t.view('stats'),
@@ -70,39 +70,39 @@ define(['angular', 'app'], function (angular, app) {
       //node seed
       .when('/node/grunt', {
         templateUrl: t.view('node/grunt'),
-        controller: 'node'
+        controller: 'Node'
       })
       .when('/node/backgroundtasks', {
         templateUrl: t.view('node/backgroundtasks'),
-        controller: 'node'
+        controller: 'Node'
       })
       .when('/node/tests', {
         templateUrl: t.view('node/tests'),
-        controller: 'node'
+        controller: 'Node'
       })
       .when('/node/deployment', {
         templateUrl: t.view('node/deployment'),
-        controller: 'node'
+        controller: 'Node'
       })
 
       //angular seed
       .when('/angular/grunt', {
         templateUrl: t.view('angular/grunt'),
-        controller: 'angular'
+        controller: 'Angular'
       })
       .when('/angular/deployment', {
         templateUrl: t.view('angular/deployment'),
-        controller: 'angular'
+        controller: 'Angular'
       })
 
       //clevertech
       .when('/clevertech/modularity', {
         templateUrl: t.view('clevertech/modularity'),
-        controller: 'clevertech'
+        controller: 'Clevertech'
       })
       .when('/clevertech/cli', {
         templateUrl: t.view('clevertech/cli'),
-        controller: 'clevertech'
+        controller: 'Clevertech'
       })
 
       .when('/error', {

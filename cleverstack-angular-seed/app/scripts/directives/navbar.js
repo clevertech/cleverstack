@@ -22,9 +22,6 @@ define(['angular', 'app'], function (angular) {
             link: function($scope, $element, $attrs, Navbar) {
                 $scope.$location = $location;
                 $scope.$watch('$location.path()', function(locationPath) {
-                    console.log(locationPath);
-                    console.log($element);
-
                     var $li, link,
                         $liElements = $element.find("li");
 
@@ -32,7 +29,6 @@ define(['angular', 'app'], function (angular) {
                     {
                         $li = $($liElements[i]);
                         link = $li.find("a").attr('href');
-                        console.log(link);
                         // if (link.toLowerCase().indexOf(locationPath) >= 0) {
                         if (link.toLowerCase() == locationPath) {
                            $li.addClass("active");
