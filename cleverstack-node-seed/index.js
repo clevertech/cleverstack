@@ -191,6 +191,11 @@ io.sockets.on('connection', function(socket){
         console.log(data);
     });
 
+    // sends the user list to the user.
+    socket.on('userlist', function(data){
+        userlist(socket, data);
+    });
+
     // when a client calls the 'socket.close()'
     // function or closes the browser, this event
     // is built in socket.io so we actually dont
@@ -214,6 +219,7 @@ function connect(socket, data){
     var msg = {
         id: new Date().getTime(),
         user: 'chatroom',
+        type: 'room',
         text: 'User ' + data.username + ' has joined.'
     };
     socket.emit('chatmessage', msg);
@@ -234,6 +240,7 @@ function disconnect(socket){
     var msg = {
         id: new Date().getTime(),
         user: 'chatroom',
+        type: 'room',
         text: 'User ' + username + ' has left.'
     };
     socket.emit('chatmessage', msg);
@@ -246,4 +253,10 @@ function chatmessage(socket, data){
     // a message/event to all other clients except
     // the sender himself
     socket.broadcast.emit('chatmessage', data);
+}
+
+// receive user list request from a client
+function userlist(socket, data){
+    socket.emit('userlist', chatClients);
+    socket.broadcast.emit('userlist', chatClients);
 }

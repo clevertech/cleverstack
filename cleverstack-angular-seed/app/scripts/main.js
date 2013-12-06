@@ -71,6 +71,7 @@ require([
     // Filters
     'filters/starts-with',
     'filters/currentUserToTop',
+    'filters/reverseArray',
 
     // Services
     'services/debug',

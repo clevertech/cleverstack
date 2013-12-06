@@ -7,15 +7,15 @@
 
                 <h1>Chat</h1>
 
-                <p>Example of Cleverstack Seeds using Angular, Node & Socket.io to provide live chat.</p>
+                <p>Demo of Cleverstack Seeds using Angular, Node & Socket.io to provide live chat.</p>
 
-                <div class="col-md-3 well">
+                <div class="col-md-3">
 
                     <h3>Users Online</h3>
                     <div id="user-list">
                         <ul>
                             <li data-ng-repeat="u in users | orderBy:'username' | currentUserToTop:user.id" ng-class="{online:u.online}">
-                                {{u.username}}
+                                <span class="glyphicon glyphicon-ok-sign"></span> {{u.username}}
                             </li>
                         </ul>
                     </div>
@@ -25,13 +25,18 @@
                 <div class="col-md-9 well">
 
                     <h3>Live Chat</h3>
+                    <div class="checkbox pull-right">
+                      <label>
+                        <input ng-model="hideRoomMsgs" id="show-room-msgs" type="checkbox" checked="checked"> room log
+                      </label>
+                    </div>
+
                     <div id="message-list">
                         <ul>
-                            <li ng-repeat="m in messages">
-                                 <span class="time">{{ m.id | date:"MM/dd/yyyy hh:mm:ss" }}</span> |
-                                 <span class="user">{{ m.user }}</span> >
+                            <li ng-repeat="m in messages | reverseArray" ng-hide="(hideRoomMsgs == false && m.type == 'room')">
+                                 <span class="time">{{ m.id | date:"MM/dd/yyyy hh:mm:ss" }} | </span>
+                                 <span class="user">{{ m.user }} > </span>
                                  <span class="text">{{ m.text }}</span>
-
                             </li>
                         </ul>
                     </div>
@@ -41,6 +46,7 @@
                             <div class="col-md-12">
                                 <textarea rows="2" ng-model="message" placeholder="Type your message" min-length="3"></textarea>
                             </div>
+                            <br/>
                             <div class="col-md-12">
                                 <button type="submit" ng-disabled="message.length < 3" class="btn btn-primary pull-right" ng-click="newMsg()">
                                 <span class="glyphicon glyphicon-share-alt"></span>&nbsp;Share</button>

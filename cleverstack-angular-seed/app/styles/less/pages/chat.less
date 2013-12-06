@@ -5,9 +5,10 @@
     #message-list {
 
         width: 100%;
-        min-height: 400px;
         background: #FFF;
         padding: 15px;
+        height: 400px;
+        overflow: auto;
 
         ul {
 
@@ -19,6 +20,13 @@
                 list-style: none;
 
             }
+
+        }
+
+        .time, .user {
+
+            font-size: 0.8em;
+            color: #8B8B8B;
 
         }
 
@@ -52,6 +60,14 @@
 
                 &:first-child {
 
+                    border-bottom: 1px solid #EEE;
+                    padding-bottom: 5px;
+
+                }
+
+                .glyphicon-ok-sign {
+
+                    color: #00C000;
 
                 }
 
@@ -62,3 +78,24 @@
     }
 
 }
+
+@media (max-width: 998px) {
+
+    #user-list {
+
+        display: inline-block;
+        width: 100%;
+
+        li {
+
+            float: left;
+            border: 0;
+            padding-bottom: 0;
+
+        }
+
+    }
+
+}
+
+

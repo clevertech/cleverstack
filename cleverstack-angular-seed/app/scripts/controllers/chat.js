@@ -6,15 +6,6 @@ define(['app'], function(app) {
 
             console.log('Chat controller...');
 
-
-            // inject the user service if it doesn't exist
-            // if (!$scope.userService) {
-            //     $scope.userService = $injector.get('UserService');
-            // }
-
-            // // get all users
-            // $scope.users = $scope.userService.getUsers();
-
             // update current user when it changes
             $scope.$watch($auth.getCurrentUser, function() {
                 $scope.user = $auth.getCurrentUser() || false;
@@ -22,24 +13,33 @@ define(['app'], function(app) {
 
             $scope.users = [];
             $scope.messages = [];
+            $scope.hideRoomMsgs = true;
 
             var socket = io.connect('http://162.243.69.108:8080');
+
             socket.on('connect', function(data) {
+
                 // socket connected
                 console.log('socket connected');
                 $scope.connect(data);
+
             });
+
             socket.on('disconnect', function(data) {
+
                 // socket disconnected
                 console.log('socket disconnected');
                 $scope.disconnect(data);
-            });
-            $scope.$on('$destroy', function(event) {
-                console.log('scope destoyed...');
-                socket.removeListener(this);
-                $scope.disconnect();
+
             });
 
+            $scope.$on('$destroy', function(data) {
+
+                console.log('scope destoyed...');
+                socket.removeListener(this);
+                $scope.disconnect(data);
+
+            });
 
             $scope.connect = function(data) {
 
@@ -70,7 +70,8 @@ define(['app'], function(app) {
                     id: data.id,
                     text: data.text,
                     uid: data.uid,
-                    user: data.user
+                    user: data.user,
+                    type: data.type
                 });
                 if(!$scope.$$phase) {
                     $scope.$apply();
@@ -97,14 +98,16 @@ define(['app'], function(app) {
                     id: new Date().getTime(),
                     text: $scope.message,
                     uid: $scope.user.id,
-                    user: $scope.user.username
+                    user: $scope.user.username,
+                    type: "user"
                 };
                 $scope.sendMsg(msg);
                 $scope.message = '';
 
             };
 
-
+            // update user list
+            socket.emit('userlist', null);
 
         }
     ]);
