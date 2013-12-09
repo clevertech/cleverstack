@@ -1,12 +1,12 @@
+
 var Class = require('uberclass')
   , async = require('async')
   , httpGet = require( 'http-get' );
 
-
 var ExampleTaskClass = Class.extend(
 {
 
-}, 
+},
 
 {
     ExampleTaksModel: null,
@@ -35,7 +35,7 @@ var ExampleTaskClass = Class.extend(
         //     callback
         // );
     }
-    
+
 });
 
 module.exports = new ExampleTaskClass( modelExampleTask );

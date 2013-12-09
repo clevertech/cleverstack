@@ -1,0 +1,16 @@
+@doc overview
+@id index
+@name Back-end API Routes
+@description
+
+#Back-end API Routes
+
+This is an example of the back-end API provided by the Node Seed.
+
+<div class="alert alert-success"><i class="icon-thumbs-up"></i> Fancy a route?</div>
+
+
+<page-list></page-list>
+
+
+<pager></pager>

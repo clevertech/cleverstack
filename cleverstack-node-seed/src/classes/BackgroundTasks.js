@@ -1,3 +1,4 @@
+
 var Class = require('uberclass')
   , async = require('async')
   , MemCached = require('memcached')
@@ -35,13 +36,13 @@ module.exports = Class.extend(
 
         handleMessage: function( msg ){
             var taskObj;
-            var m = { 
+            var m = {
                 type   : 'error'
             ,   result : 'invalid'
             ,   wrkid  : ( !msg.wrkid ) ? null : msg.wrkid
             ,   pid    : process.pid
             };
-            
+
             if( this.tasksToRun !== null ){
                 if( config.background.on ){
                     var l = config.background.tasks.length, item;
@@ -58,7 +59,7 @@ module.exports = Class.extend(
 
             if( taskObj ){
                 taskObj.startTask(function( err, result ){
-                    
+
                     if( !err ){
                         m['type'] = 'success';
                         m['result'] = result;
@@ -66,7 +67,7 @@ module.exports = Class.extend(
                         m['type'] = 'error';
                         m['result'] = err;
                     }
-                    
+
                     process.send(m);
                 });
             }else{
@@ -81,7 +82,7 @@ module.exports = Class.extend(
                 if ( this.isMaster !== true ) {
                     this.getMasterLock();
                 } else {
-                    
+
                     async.parallel([
                         this.runMasterTasks
                     ,   this.runTasks
@@ -160,7 +161,7 @@ module.exports = Class.extend(
             async.series(
                 this.tasksToRun.nomaster,
                 this.proxy( 'tasksAreCompleted' )
-            ); 
+            );
         },
 
         tasksAreCompleted : function(){
@@ -194,13 +195,13 @@ module.exports = Class.extend(
 
                 while ( l-- ) {
                     item = cbt.tasks[ l ];
-                    
+
                     var key = ( item.masterOnly ) ? 'master':'nomaster';
                     if( tasks[ item.name ] !== undefined ){
 
-                         //Use one common "functionName" for every task so we can do 
+                         //Use one common "functionName" for every task so we can do
                          // async.parallel( this.tasksToRun.master, callback);
-                         t[ key ].push( tasks[ item.name ].startTask ); 
+                         t[ key ].push( tasks[ item.name ].startTask );
                     };
                 };
             }

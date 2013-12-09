@@ -1,0 +1,93 @@
+@doc overview
+@id index
+@name Services
+@description
+
+#Services
+
+Example of documentation generated for Node Seed Services.
+
+
+<page-list></page-list>
+
+
+@doc overview
+@id service_1
+@name Service 1
+@description
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+```js
+
+/**
+ * This is a block comment
+ */
+
+/**
+ * This is a multi
+ * line block comment
+ */
+
+```
+
+<pager></pager>
+
+@doc overview
+@id service_2
+@name Service 2
+@description
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+```js
+
+/**
+ * This is a block comment
+ */
+
+/**
+ * This is a multi
+ * line block comment
+ */
+
+```
+
+<pager></pager>
+
+@doc overview
+@id service_3
+@name Service 3
+@description
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+```js
+
+/**
+ * This is a block comment
+ */
+
+/**
+ * This is a multi
+ * line block comment
+ */
+
+```
+
+<pager></pager>

@@ -16,27 +16,31 @@ module.exports = function( grunt ) {
             },
         },
         docular: {
-            baseUrl: 'http://localhost:8888',
-            showAngularDocs: false,
-            showDocularDocs: false,
-            copyDocDir: '/docs',
-            docAPIOrder : ['doc'],
+            docular_webapp_target: '/docs',
+            showDocularDocs: true,
+            showAngularDocs: true,
             groups: [
                 {
-                    groupTitle: 'CleverStack Seed',
+                    groupTitle: 'CleverStack Node Seed',
                     groupId: 'cleverstack',
                     groupIcon: 'icon-book',
                     sections: [
                         {
                             id: "controllers",
                             title: "Controllers",
+                            docs: [
+                                "docs-sections/controllers.doc",
+                            ],
                             scripts: [
                                 "src/controllers",
                             ]
                         },
                         {
-                            id: "model",
+                            id: "models",
                             title: "Models",
+                            docs: [
+                                "docs-sections/models.doc",
+                            ],
                             scripts: [
                                 "src/model",
                             ]
@@ -44,20 +48,49 @@ module.exports = function( grunt ) {
                         {
                             id: "services",
                             title: "Services",
+                            docs: [
+                                "docs-sections/services.doc",
+                            ],
                             scripts: [
                                 "src/service",
                             ]
                         },
                         {
+                            id: "routes",
+                            title: "Routes",
+                            docs: [
+                                "docs-sections/routes.doc",
+                            ],
+                            scripts: [
+                                "routes.js",
+                            ]
+                        },
+                        {
                             id: "utils",
                             title: "Utils",
+                            docs: [
+                                "docs-sections/utils.doc",
+                            ],
                             scripts: [
                                 "src/utils",
                             ]
                         },
+                        {
+                            id: "tasks",
+                            title: "Tasks",
+                            docs: [
+                                "docs-sections/tasks.doc",
+                            ],
+                            scripts: [
+                                "src/tasks",
+                            ]
+                        }
                     ]
                 }
             ]
+        },
+        "docular-server": {
+            port: 8888 //default is 8000
         },
         connect: {
             options: {
