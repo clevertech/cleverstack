@@ -1,5 +1,27 @@
 {
     "environmentName": "PROD",
 
-	"background":{}
+    "db": {
+        "username": "",
+        "password": "",
+        "database": "",
+        "options": {
+            "host": "localhost",
+            "dialect": "mysql",
+            "port": 3306
+        }
+    },
+
+    "testdb": {
+        "username": "",
+        "password": "",
+        "database": "",
+        "options": {
+            "host": "localhost",
+            "dialect": "mysql",
+            "port": 3306
+        }
+    }
+
+    "background":{}
 }

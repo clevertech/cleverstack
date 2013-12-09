@@ -64,7 +64,9 @@ app.configure(function() {
     }));
 
     // middleware stack
-    app.use(express.bodyParser());
+    // app.use(express.bodyParser());
+    app.use(express.json());
+    app.use(express.urlencoded());
 
     // session management
     app.use(express.cookieParser());

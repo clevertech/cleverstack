@@ -33,6 +33,7 @@ var fallbackToIndex = function (connect, index, file) {
   });
 };
 
+
 module.exports = function (grunt) {
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
@@ -50,33 +51,35 @@ module.exports = function (grunt) {
   grunt.initConfig({
     yeoman: yeomanConfig,
     docular: {
-      baseUrl: 'http://localhost:9999',
-      showAngularDocs: false,
-      showDocularDocs: false,
-      copyDocDir: '/docs',
-      docAPIOrder : ['doc', 'angular'],
-      groups: [
+        docular_webapp_target: '/docs',
+        showDocularDocs: true,
+        showAngularDocs: true,
+        groups: [
         {
-          groupTitle: 'CleverStack Seed',
-          groupId: 'cleverstack',
-          groupIcon: 'icon-book',
-          sections: [
-            {
-              id: "api",
-              title: "API",
-              scripts: [
-                "app/scripts/app.js",
-                "app/scripts/config.js",
-                "app/scripts/routes.js",
-                "app/scripts/services",
-                "app/scripts/filters",
-                "app/scripts/directives",
-                "app/scripts/controllers",
-              ]
-            }
-          ]
+            groupTitle: 'CleverStack ngSeed',
+            groupId: 'cleverstack',
+            groupIcon: 'icon-book',
+            sections: [
+                {
+                    id: "api",
+                    title: "API",
+                    showSource: true,
+                    scripts: [
+                        "app/scripts/app.js",
+                        "app/scripts/config.js",
+                        "app/scripts/routes.js",
+                        "app/scripts/services",
+                        "app/scripts/filters",
+                        "app/scripts/directives",
+                        "app/scripts/controllers"
+                    ]
+                }
+            ]
         }
-      ] //groups of documentation to parse
+        ] //groups of documentation to parse
+    },
+    "docular-server": {
+        port: 9999 //default is 8000
     },
     watch: {
       livereload: {
@@ -151,7 +154,7 @@ module.exports = function (grunt) {
         options: {
           port: 9999,
           base: __dirname+'/docs'
-        }
+        },
       }
     },
     open: {
@@ -162,7 +165,7 @@ module.exports = function (grunt) {
         url: 'http://localhost:<%= connect.test.options.port %>/test/e2e/runner.html'
       },
       docs: {
-        url: 'docs/index.html'
+        url: 'http://localhost:<%= connect.docs.options.port %>'
       }
     },
     clean: {
@@ -346,7 +349,8 @@ module.exports = function (grunt) {
 
   grunt.renameTask('regarde', 'watch');
 
-  grunt.registerTask('docs', ['docular']);
+  grunt.registerTask('docs', ['docular', 'docular-server']);
+
 
   grunt.registerTask('server', [
     'clean:server',
@@ -371,7 +375,7 @@ module.exports = function (grunt) {
     'requirejs',
     'rev',
     'usemin',
-    'docs'
+    'docular'
   ]);
 
   grunt.registerTask('default', ['build']);
