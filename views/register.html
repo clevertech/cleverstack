@@ -4,13 +4,13 @@
 
         <div class="row text-center">
             <p>
-                <img src="images/logos/cleverstack-logo.png" alt="Cleverstack.io" />
+                <img src="images/logos/cleverstack-logo.png" alt="Cleverstack.io">
             </p>
         </div>
 
         <div class="row text-left">
             <div class="col-md-6 col-md-offset-3">
-                <form role="form" name="registerForm" id="registerForm" ng-submit="register()" ng-class="{submitted:submitted}" novalidate>
+                <form role="form" name="registerForm" id="registerForm" ng-submit="register()" ng-class="{submitted:submitted}" novalidate="">
 
                     <!-- Form error/success messgaes -->
                     <div class="alert form-messages {{formMessageClass}} alert-dismissable" ng-show="formMessage">{{ formMessage }}</div>
@@ -18,7 +18,7 @@
                     <!-- Username -->
                     <div class="form-group">
                         <label for="username">Username*</label>
-                        <input type="text" class="form-control" name="username" id="username" ng-model="credentials.username" placeholder="Username" required />
+                        <input type="text" class="form-control" name="username" id="username" ng-model="credentials.username" placeholder="Username" required="">
                         <div ng-show="(registerForm.username.$dirty || submitted)">
                             <span class="error" ng-show="registerForm.username.$error.required">Please choose a username.</span>
                         </div>
@@ -27,7 +27,7 @@
                     <!-- Email -->
                     <div class="form-group">
                         <label for="email">Email*</label>
-                        <input type="email" id="email" name="email" class="form-control" ng-model="credentials.email" placeholder="Email" ng-unique="user.email" email required />
+                        <input type="email" id="email" name="email" class="form-control" ng-model="credentials.email" placeholder="Email" ng-unique="user.email" email="" required="">
                         <span ng-show="busy" class="glyphicon glyphicon-refresh rotating"></span>
                         <span ng-show="emailAvailable && registerForm.email.$valid" class="glyphicon glyphicon-ok floating green"></span>
                         <div ng-show="(registerForm.email.$dirty || submitted)">
@@ -40,7 +40,7 @@
                     <!-- Password -->
                     <div class="form-group">
                         <label for="password">Password*</label>
-                        <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="Password" ng-minlength="6" required />
+                        <input type="password" id="password" name="password" class="form-control" ng-model="credentials.password" placeholder="Password" ng-minlength="6" required="">
                         <div ng-show="(registerForm.password.$dirty || submitted)">
                             <span class="error" ng-show="registerForm.password.$error.required">Please enter a password.</span>
                             <span class="error" ng-show="registerForm.password.$error.minlength">Password must be at least 6 characters.</span>
@@ -50,7 +50,7 @@
                     <!-- Confirm Password -->
                     <div class="form-group">
                         <label for="passwordConfirmation">Confirm Password*</label>
-                        <input type="password" id="passwordConfirmation" name="passwordConfirmation" class="form-control" ng-model="credentials.passwordConfirmation" placeholder="Password" pw-check="password" required />
+                        <input type="password" id="passwordConfirmation" name="passwordConfirmation" class="form-control" ng-model="credentials.passwordConfirmation" placeholder="Password" pw-check="password" required="">
                         <div ng-show="(registerForm.passwordConfirmation.$dirty || submitted)">
                             <span class="error" ng-show="registerForm.passwordConfirmation.$error.required">Please confirm your password.</span>
                             <span class="error" ng-show="registerForm.passwordConfirmation.$error.pwcheck">Your passwords don't match.</span>
