@@ -1,6 +1,6 @@
 GROUP_DATA=[
 {"groupTitle":"CleverStack ngSeed","groupId":"cleverstack","groupIcon":"icon-book","sections":[
-{"id":"api","title":"API","showSource":true,"scripts":["app/scripts/app.js","app/scripts/config.js","app/scripts/routes.js","app/scripts/services","app/scripts/filters","app/scripts/directives","app/scripts/controllers"],"doc_api":"angular"}],"visible":true},
+{"id":"api","title":"API","showSource":true,"docs":["docs-sections/api.doc"],"scripts":["app/scripts/app.js","app/scripts/config.js","app/scripts/routes.js","app/scripts/services","app/scripts/filters","app/scripts/directives","app/scripts/controllers"],"doc_api":"doc"}],"visible":true},
 {"groupTitle":"Docular","groupId":"docular","groupIcon":"icon-edit","descr":"Description","showSource":true,"sections":[
 {"id":"docularinstall","title":"Install Docular","docs":["/var/www/cleverstack-angular-seed/node_modules/grunt-docular/node_modules/docular/lib/scripts/docs/install"],"rank":
 {"installnode":1,"installgrunt":2,"installdocular":3},"scripts":[],"doc_api":"doc"},

@@ -64,6 +64,9 @@ module.exports = function (grunt) {
                     id: "api",
                     title: "API",
                     showSource: true,
+                    docs: [
+                        "docs-sections/api.doc"
+                    ],
                     scripts: [
                         "app/scripts/app.js",
                         "app/scripts/config.js",

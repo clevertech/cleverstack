@@ -17,8 +17,8 @@ module.exports = function( grunt ) {
         },
         docular: {
             docular_webapp_target: '/docs',
-            showDocularDocs: true,
-            showAngularDocs: true,
+            showDocularDocs: false,
+            showAngularDocs: false,
             groups: [
                 {
                     groupTitle: 'CleverStack Node Seed',
@@ -29,60 +29,60 @@ module.exports = function( grunt ) {
                             id: "controllers",
                             title: "Controllers",
                             docs: [
-                                "docs-sections/controllers.doc",
+                                "docs-sections/controllers.doc"
                             ],
                             scripts: [
-                                "src/controllers",
+                                "src/controllers"
                             ]
                         },
                         {
                             id: "models",
                             title: "Models",
                             docs: [
-                                "docs-sections/models.doc",
+                                "docs-sections/models.doc"
                             ],
                             scripts: [
-                                "src/model",
+                                "src/model"
                             ]
                         },
                         {
                             id: "services",
                             title: "Services",
                             docs: [
-                                "docs-sections/services.doc",
+                                "docs-sections/services.doc"
                             ],
                             scripts: [
-                                "src/service",
+                                "src/service"
                             ]
                         },
                         {
                             id: "routes",
                             title: "Routes",
                             docs: [
-                                "docs-sections/routes.doc",
+                                "docs-sections/routes.doc"
                             ],
                             scripts: [
-                                "routes.js",
+                                "routes.js"
                             ]
                         },
                         {
                             id: "utils",
                             title: "Utils",
                             docs: [
-                                "docs-sections/utils.doc",
+                                "docs-sections/utils.doc"
                             ],
                             scripts: [
-                                "src/utils",
+                                "src/utils"
                             ]
                         },
                         {
                             id: "tasks",
                             title: "Tasks",
                             docs: [
-                                "docs-sections/tasks.doc",
+                                "docs-sections/tasks.doc"
                             ],
                             scripts: [
-                                "src/tasks",
+                                "src/tasks"
                             ]
                         }
                     ]
