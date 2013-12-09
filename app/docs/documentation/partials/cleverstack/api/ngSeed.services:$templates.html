@@ -1,0 +1,50 @@
+<h1><code ng:non-bindable="">$templates</code>
+<span class="hint">( services in module <code ng:non-bindable="">ngSeed</code>
+ )</span>
+</h1>
+<div><h2 id="Description">Description</h2>
+<div class="description"><p>This service facilitates the loading of templates (not yet extended to
+ng-include) thru two functions.</p>
+
+<p>It can be configured using the $templatesProvider.</p>
+
+<h3 id="examples">Examples</h5>
+
+<pre class="prettyprint linenums">$templates.view('home');
+// will look for /views/home.html
+
+$templates.partial('navbar');
+// will look for /views/partials/navbar.html
+</pre>
+This path can be changed using  <code class="plain">$templatesProvider.setPath</code> .
+The extension can be changed using  <code class="plain">$templatesProvider.setExtension</code> .</p></div>
+<div class="member method"><h2 id="Methods">Methods</h2>
+<ul class="methods"><li><h3 id="partial">partial(section, partialName)</h3>
+<div class="partial"><p>Utility functions to get the path of a partial.</p>
+
+<p>This method is also available from $templatesProvider</p><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code class="plain">section – {String} – </code>
+<p>The folder path to look into.</p></li>
+<li><code class="plain">partialName – {String} – </code>
+<p>The name of the partial.</p></li>
+</ul>
+<h4 id="Returns">Returns</h4>
+<div class="returns"><code class="plain">{String}</code>
+– <p>The path to the partial.</p></div>
+</div>
+</li>
+<li><h3 id="view">view(viewName)</h3>
+<div class="view"><p>Utility functions to get the path of a view.</p>
+
+<p>This method is also available from $templatesProvider</p><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code class="plain">viewName – {String} – </code>
+<p>The name of the view.</p></li>
+</ul>
+<h4 id="Returns">Returns</h4>
+<div class="returns"><code class="plain">{String}</code>
+– <p>The path to the view.</p></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

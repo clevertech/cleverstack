@@ -1,0 +1,198 @@
+/* home.less */
+
+#home {
+
+    .jumbotron {
+
+        /*background: #f7f7f7 url("../images/bgs/bg-purple-sky.jpg");*/
+        background: #313131 url(../images/bgs/bg-grey-squares.png) repeat;
+
+        overflow: hidden;
+        position: relative;
+        padding: 40px 0 40px;
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+        background-size: cover;
+
+        h1  {
+
+            margin: 10px 0 10px 0;
+
+        }
+
+        h1, p {
+
+            color: #FFF;
+
+        }
+
+        a.home {
+
+            display: inline-block;
+
+        }
+    }
+
+    @media (max-width: 979px) {
+      .jumbotron {
+        background-position: 50% 20%;
+      }
+    }
+
+    .jumbotron:after {
+      opacity: .15;
+      background: none;
+    }
+
+    .cs-docs-social {
+
+        background: rgba(245, 245, 245, 0.15);
+        border-top: 1px solid rgba(245, 245, 245, 0.25);
+        border-bottom: 1px solid rgba(221, 221, 221, 0.25);
+        padding: 15px 0;
+        text-align: center;
+
+    }
+
+    ul.cs-docs-social-buttons {
+
+        margin: 0;
+        height: 36px;
+        overflow: hidden;
+
+    }
+
+    .cs-docs-social ul.cs-docs-social-buttons li {
+
+        padding: 5px 0px;
+
+    }
+
+    .cs-docs-social-buttons li {
+
+        display: inline-block;
+        line-height: 1;
+
+    }
+
+    .col-md-6, .col-md-12 {
+
+        padding: 10px;
+
+    }
+
+    .border-wrap-me {
+
+        border: 1px solid #DDD;
+        padding: 15px 25px;
+
+        .border-radius(12px);
+        .transition(all, 0.5s, ease-out);
+
+        p {
+
+            text-align: left;
+
+        }
+
+        .btn {
+
+            margin-bottom: 5px;
+
+        }
+
+        a {
+
+            font-weight: bold;
+
+        }
+
+        &.min-h {
+
+            min-height: 220px;
+
+        }
+
+        &:hover {
+
+            border: 1px solid #797979;
+
+        }
+
+    }
+
+    .technolgies {
+
+        a {
+
+            display: inline-block;
+            border: 1px solid #FFF;
+
+            &:hover {
+
+                border: 1px solid #DDD;
+                .border-radius(12px);
+
+            }
+
+            img {
+
+                .border-radius(12px);
+
+            }
+
+        }
+
+    }
+
+    /* Github-Ribbon
+    -------------------------------------------------- */
+    .github-ribbon {
+
+        background-color: #1F1F1F;
+        position: fixed;
+        top: 2.3em;
+        right: -3.7em;
+        z-index: 9999;
+        display: block;
+        padding: 0.2em 3.5em;
+        letter-spacing: 0.03em;
+
+        .user-select(none);
+        .rotate(45deg);
+        /*.transition(all, 2s, ease-out);*/
+
+        -moz-box-shadow: 0 0 0 1px #1d212e inset,0 0 2px 1px #fff inset,0 0 1em #888;
+        -webkit-box-shadow: 0 0 0 1px #1d212e inset,0 0 2px 1px #fff inset,0 0 1em #888;
+        box-shadow: 0 0 0 1px #1d212e inset,0 0 2px 1px #fff inset,0 0 1em #888;
+        /*.drop-shadow(0 0 0 1px #1d212e inset,0 0 2px 1px #fff inset,0 0 1em #888);*/
+
+        opacity: 0.8;
+        &:hover {
+
+            opacity: 1;
+
+        }
+
+        a {
+
+
+            font: bold 0.82em sans-serif;
+            text-align: center;
+            text-shadow: 1px -1px 8px rgba(0, 0, 0, 0.6);
+            color: #FF9732;
+
+            .rotate(45deg);
+
+
+        }
+    }
+
+    @media (max-width: 480px) {
+      .github-ribbon {
+        display: none;
+      }
+    }
+
+}

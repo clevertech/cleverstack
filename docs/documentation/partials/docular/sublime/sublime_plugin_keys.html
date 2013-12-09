@@ -1,0 +1,17 @@
+<h1><code ng:non-bindable="">Add Sublime Key Bindings</code>
+<span class="hint"></span>
+</h1>
+<div><p>Now that you have added the "docular.py" plugin to Sublime, it's time to add keybindings to your user profile so you can quickly access the plugin's functionality.</p>
+
+<ol>
+<li>With Sublime open, choose <code>Preferences > Key Bindings - User</code></li>
+<li>Add this line in JSON format to the array in this file
+<pre class="prettyprint linenums">[
+    { "keys": ["command+shift+d"], "command": "docular_toggle" }
+]
+</pre></li>
+<li>Close Sublime, re-open Sublime.</li>
+<li>Now open a file that has comment blocks within it. Hit "command+shift+d" (on Mac) to toggle the comment blocks.</li>
+</ol>
+
+<p><pager></pager></p></div>

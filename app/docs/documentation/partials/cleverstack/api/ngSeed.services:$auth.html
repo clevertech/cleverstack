@@ -1,0 +1,56 @@
+<h1><code ng:non-bindable="">$auth</code>
+<span class="hint">( services in module <code ng:non-bindable="">ngSeed</code>
+ )</span>
+</h1>
+<div><h2 id="Description">Description</h2>
+<div class="description"><p>A set of functions to easily login/logout, register new users, and
+retrieving the user session from the server.</p>
+
+<h3 id="example">Example</h5>
+
+<pre class="prettyprint linenums">myApp.controller('Test', ['$scope', '$auth', function ($scope, $auth) {
+  $scope.$watch($auth.getCurrentUser, function() {
+    // do something as soon as the user changes
+    // and by this I mean logs in or out
+  });
+
+  if($auth.isLoggedIn()) {
+    // do something if the user is logged in
+    // thou this is not necessary on non-public pages
+    // on public ones you might want to use it
+    // to do some other logic
+  }
+}]);
+</pre></div>
+<div class="member method"><h2 id="Methods">Methods</h2>
+<ul class="methods"><li><h3 id="getCurrentUser">getCurrentUser()</h3>
+<div class="getcurrentuser"><h4 id="Returns">Returns</h4>
+<div class="returns"><code class="plain">{Object}</code>
+– <p>the current user</p></div>
+</div>
+</li>
+<li><h3 id="isLoggedIn">isLoggedIn()</h3>
+<div class="isloggedin"><h4 id="Returns">Returns</h4>
+<div class="returns"><code class="plain">{Boolean}</code>
+– <p>true or false if there is or not a current user</p></div>
+</div>
+</li>
+<li><h3 id="login">login(credentials)</h3>
+<div class="login"><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code class="plain">credentials – {Object} – </code>
+<p>the credentials to be passed to the login service</p></li>
+</ul>
+<h4 id="Returns">Returns</h4>
+<div class="returns"><code class="plain">{Promise}</code>
+– <p>the promise your login service returns on login</p></div>
+</div>
+</li>
+<li><h3 id="logout">logout()</h3>
+<div class="logout"><h4 id="Returns">Returns</h4>
+<div class="returns"><code class="plain">{Promise}</code>
+– <p>the promise your login service returns on logout</p></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

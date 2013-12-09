@@ -51,7 +51,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     yeoman: yeomanConfig,
     docular: {
-        docular_webapp_target: '/docs',
+        docular_webapp_target: '/app/docs',
         showDocularDocs: true,
         showAngularDocs: true,
         groups: [
@@ -340,7 +340,9 @@ module.exports = function (grunt) {
             'images/**/*.{js,css,eot,svg,ttf,woff,png,jpg,jpeg,gif,webp}',
             'styles/fonts/**/*',
             'fonts/**/*',
-            'home/**/*'
+            'home/**/*',
+            'docs/*',
+            'images/*'
           ]
         }]
       }

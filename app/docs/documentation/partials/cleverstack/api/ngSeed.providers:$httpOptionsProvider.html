@@ -1,0 +1,53 @@
+<h1><code ng:non-bindable="">$httpOptionsProvider</code>
+<span class="hint">( providers in module <code ng:non-bindable="">ngSeed</code>
+ )</span>
+</h1>
+<div><h2 id="Description">Description</h2>
+<div class="description"><p>The provider to configure the domain, port, headers and
+interceptors for all the requests made with $http.</p>
+
+<h3 id="examples">Examples</h5>
+
+<pre class="prettyprint linenums">myApp.config(['$httpOptionsProvider', function ($httpOptionsProvider) {
+  $httpOptionsProvider.setDomain('http://www.google.com');
+  $httpOptionsProvider.setWithCredentials(false);
+}]);
+</pre></div>
+<div class="member method"><h2 id="Methods">Methods</h2>
+<ul class="methods"><li><h3 id="addDomain">addDomain()</h3>
+<div class="adddomain"><p>Interceptor.</p>
+
+<p>Add the domain to all the HTTP requests that are not
+templates.</p>
+
+<p>Note: Hookup the $templates service to get the proper
+regex. This works for now as is what we are using.</p></div>
+</li>
+<li><h3 id="setDomain">setDomain(uri)</h3>
+<div class="setdomain"><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code class="plain">uri – {String} – </code>
+<p>The domain.</p></li>
+</ul>
+</div>
+</li>
+<li><h3 id="setWithCredentials">setWithCredentials(value)</h3>
+<div class="setwithcredentials"><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code class="plain">value – {Boolean} – </code>
+<p>Should it send credentials?</p></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="member property"><h2 id="Properties">Properties</h2>
+<ul class="properties"><li><h3 id="domain">domain</h3>
+<div class="domain"><p>For testing purposes this is extremely useful
+it allows you to test the app against a aws server
+running either in dev, staging or production</p></div>
+</li>
+<li><h3 id="withCredentials">withCredentials</h3>
+<div class="withcredentials"><p>Should it send session information with every request?</p></div>
+</li>
+</ul>
+</div>
+</div>

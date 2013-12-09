@@ -1,0 +1,34 @@
+{
+	"name": "FuncUnit",
+	"author": {
+		"name": "Bitovi",
+		"email": "contact@bitovi.com",
+		"web": "http://bitovi.com/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:bitovi/funcunit.git",
+		"github": "https://github.com/bitovi/funcunit"
+	},
+	"devDependencies": {
+		"grunt": "0.4.x",
+		"grunt-contrib-connect": "0.3.0",
+		"grunt-contrib-concat": "0.3.0",
+		"grunt-exec": "0.4.2",
+		"bitovi-tools": "https://github.com/bitovi/bitovi-tools/tarball/master",
+		"steal": "https://github.com/bitovi/steal-build/tarball/master",
+		"testee": "0.0.8",
+		"bower": "~1.2.4"
+	},
+	"scripts": {
+		"test": "grunt test",
+		"postinstall": "node_modules/bower/bin/bower install"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://opensource.org/licenses/mit-license.php"
+		}
+	],
+	"dependencies": {}
+}

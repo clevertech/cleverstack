@@ -1,0 +1,36 @@
+<h1><code ng:non-bindable="">$resourceFactory</code>
+<span class="hint">( services in module <code ng:non-bindable="">ngSeed</code>
+ )</span>
+</h1>
+<div><h2 id="Description">Description</h2>
+<div class="description"><p>A service used to generate and register resources.</p></div>
+<div class="member method"><h2 id="Methods">Methods</h2>
+<ul class="methods"><li><h3 id="builder">builder($resource, $httpOptions)</h3>
+<div class="builder"><p>Generates an HTTP Resource.</p><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code class="plain">$resource – {$resource} – </code>
+<p>ngResource</p></li>
+<li><code class="plain">$httpOptions – {$httpOptions} – </code>
+<p>The HTTP Options object.</p></li>
+</ul>
+<h4 id="Returns">Returns</h4>
+<div class="returns"><code class="plain">{resource}</code>
+– <p>The actual resource for resourceName.</p></div>
+</div>
+</li>
+<li><h3 id="ResourceFactory">ResourceFactory(resourceName)</h3>
+<div class="resourcefactory"><p>Generates a factory function that uses ngResource
+to talk to a REST resource that can be directly used
+with factory.</p>
+
+<p>Example of use with factory:
+<pre class="prettyprint linenums">services
+  .factory('ResourceService', ResourceFactory('resource'));
+</pre><h4 id="Parameters">Parameters</h4>
+<ul class="parameters"><li><code class="plain">resourceName – {String} – </code>
+<p>The name of the resource.</p></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>

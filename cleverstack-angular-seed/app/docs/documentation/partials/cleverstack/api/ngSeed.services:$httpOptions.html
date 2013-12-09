@@ -1,0 +1,18 @@
+<h1><code ng:non-bindable="">$httpOptions</code>
+<span class="hint">( services in module <code ng:non-bindable="">ngSeed</code>
+ )</span>
+</h1>
+<div><h2 id="Description">Description</h2>
+<div class="description"><p>This options can be plugged in the $httpProvider or
+the $http object to set up application wide configuration
+for HTTP requests.</p>
+
+<h3 id="examples">Examples</h5>
+
+<pre class="prettyprint linenums">myApp.controller('Test', ['$scope', '$httpOptions', function ($scope, $httpOptions) {
+  if( /localhost/.test($httpOptions.domain) ) {
+    // you are working with your local server
+  }
+}]);
+</pre></div>
+</div>

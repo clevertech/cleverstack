@@ -1,0 +1,44 @@
+<h1><code ng:non-bindable="">Webapp Target</code>
+<span class="hint"></span>
+</h1>
+<div><ul class="properties">
+    <li>
+        <h3 id="annotate">docular_webapp_target {string}</h4>
+        <div class="annotate">
+            <p>A string relative to current location of the Gruntfile.js file that indicates where the webapp files should be generated. This is the entire webapp with all the generated partials.</p>
+        </div>
+    </li>
+</ul>
+
+<h2 id="defaults">Defaults</h3>
+
+<p>If you do not provide the docular<em>webapp</em>target configuration, then the webapp will be generated in a target directory that lives within the Docular node_module. This is fine if you wish to simply view your documentation locally using the grunt docular-server command.</p>
+
+<p>Note that the grunt docular-server command will look for this configuration in the Docular grunt configurations. There for the node server can be started within the context of your specified target.</p>
+
+<p>Currently, the entire directory get's rewritten. We hope to soon allow you to edit files within the target directory without them being blown away. Stay tuned!</p>
+
+<pre class="prettyprint linenums">module.exports = function(grunt) {
+
+    // Project configuration.
+    grunt.initConfig({
+
+        pkg: grunt.file.readJSON('package.json'),
+
+        docular: {
+            // other options ommitted for simplicity
+            docular_webapp_target : "my-documentation"
+        }
+
+    });
+
+    // Load the plugin that provides the "docular" tasks.
+    grunt.loadNpmTasks('grunt-docular');
+
+    // Default task(s).
+    grunt.registerTask('default', ['docular']);
+
+};
+</pre>
+
+<p><pager></pager></p></div>

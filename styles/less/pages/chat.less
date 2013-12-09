@@ -1,0 +1,101 @@
+
+
+#chat {
+
+    #message-list {
+
+        width: 100%;
+        background: #FFF;
+        padding: 15px;
+        height: 400px;
+        overflow: auto;
+
+        ul {
+
+            margin: 0;
+            padding: 0;
+
+            li {
+
+                list-style: none;
+
+            }
+
+        }
+
+        .time, .user {
+
+            font-size: 0.8em;
+            color: #8B8B8B;
+
+        }
+
+    }
+
+    textarea {
+
+        width: 100%;
+
+    }
+
+    #user-list {
+
+        ul {
+
+            margin: 0;
+            padding: 0;
+
+            li {
+
+                list-style: none;
+                padding: 0 5px;
+                border-left: 4px solid transparent;
+                margin-bottom: 5px;
+
+                &.online {
+
+                    border-left-color: #25DB25;
+
+                }
+
+                &:first-child {
+
+                    border-bottom: 1px solid #EEE;
+                    padding-bottom: 5px;
+
+                }
+
+                .glyphicon-ok-sign {
+
+                    color: #00C000;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-width: 998px) {
+
+    #user-list {
+
+        display: inline-block;
+        width: 100%;
+
+        li {
+
+            float: left;
+            border: 0;
+            padding-bottom: 0;
+
+        }
+
+    }
+
+}
+
+
