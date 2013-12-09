@@ -1,1 +1,1 @@
-baseURL = '/docs/'; addTag('base', {href: '/docs/'});  window.discussionConfigs = {active:false, shortName:'false', url:'false', dev:false}; 
+baseURL = '/'; addTag('base', {href: '/'});  window.discussionConfigs = {active:false, shortName:'false', url:'false', dev:false}; 
