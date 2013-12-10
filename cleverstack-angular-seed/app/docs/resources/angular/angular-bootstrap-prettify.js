@@ -128,7 +128,7 @@ directive.ngHtmlWrap = ['reindentCode', 'templateMerge', function(reindentCode, 
             module: '',
             body: element.text()
           },
-        html = "<!doctype html>\n<html ng-app{{module}}>\n  <head>\n{{head:4}}  </head>\n  <body>\n{{body:4}}  </body>\n</html>";
+        html = "<!doctype html>\n<html ng-app=\"App\">\n  <head>\n{{head:4}}  </head>\n  <body>\n{{body:4}}  </body>\n</html>";
 
       angular.forEach((attr.ngHtmlWrap || '').split(' '), function(dep) {
         if (!dep) return;

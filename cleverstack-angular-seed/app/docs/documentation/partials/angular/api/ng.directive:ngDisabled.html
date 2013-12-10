@@ -25,17 +25,17 @@ To solve this problem, we introduce the  <code class="plain">ngDisabled</code>  
 </div>
 <h2 id="Example">Example</h2>
 <div class="example"><h4>Source</h4>
-<div source-edit="" source-edit-deps="angular.js" source-edit-html="index.html-72" source-edit-css="" source-edit-js="" source-edit-unit="" source-edit-scenario="scenario.js-73"></div>
+<div source-edit="" source-edit-deps="angular.js" source-edit-html="index.html-79" source-edit-css="" source-edit-js="" source-edit-unit="" source-edit-scenario="scenario.js-80"></div>
 <div class="tabbable"><div class="tab-pane" title="index.html">
-<pre class="prettyprint linenums" ng-set-text="index.html-72" ng-html-wrap=" angular.js"></pre>
-<script type="text/ng-template" id="index.html-72">
+<pre class="prettyprint linenums" ng-set-text="index.html-79" ng-html-wrap=" angular.js"></pre>
+<script type="text/ng-template" id="index.html-79">
   Click me to toggle: <input type="checkbox" ng-model="checked"><br/>
   <button ng-model="button" ng-disabled="checked">Button</button>
 </script>
 </div>
 <div class="tab-pane" title="End to end test">
-<pre class="prettyprint linenums" ng-set-text="scenario.js-73"></pre>
-<script type="text/ng-template" id="scenario.js-73">
+<pre class="prettyprint linenums" ng-set-text="scenario.js-80"></pre>
+<script type="text/ng-template" id="scenario.js-80">
   it('should toggle button', function() {
     expect(element('.doc-example-live :button').prop('disabled')).toBeFalsy();
     input('checked').check();
@@ -44,5 +44,5 @@ To solve this problem, we introduce the  <code class="plain">ngDisabled</code>  
 </script>
 </div>
 </div><h4>Demo</h4>
-<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-72" ng-eval-javascript=""></div></div>
+<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-79" ng-eval-javascript=""></div></div>
 </div>

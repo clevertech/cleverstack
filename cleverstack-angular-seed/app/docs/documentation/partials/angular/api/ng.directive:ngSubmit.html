@@ -21,10 +21,10 @@ as class<pre class="prettyprint linenums">&lt;form class="ng-submit: {expression
 </div>
 <h2 id="Example">Example</h2>
 <div class="example"><h4>Source</h4>
-<div source-edit="" source-edit-deps="angular.js script.js" source-edit-html="index.html-144" source-edit-css="" source-edit-js="script.js-143" source-edit-unit="" source-edit-scenario="scenario.js-145"></div>
+<div source-edit="" source-edit-deps="angular.js script.js" source-edit-html="index.html-151" source-edit-css="" source-edit-js="script.js-150" source-edit-unit="" source-edit-scenario="scenario.js-152"></div>
 <div class="tabbable"><div class="tab-pane" title="index.html">
-<pre class="prettyprint linenums" ng-set-text="index.html-144" ng-html-wrap=" angular.js script.js"></pre>
-<script type="text/ng-template" id="index.html-144">
+<pre class="prettyprint linenums" ng-set-text="index.html-151" ng-html-wrap=" angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-151">
  
  <form ng-submit="submit()" ng-controller="Ctrl">
    Enter text and hit enter:
@@ -35,8 +35,8 @@ as class<pre class="prettyprint linenums">&lt;form class="ng-submit: {expression
 </script>
 </div>
 <div class="tab-pane" title="script.js">
-<pre class="prettyprint linenums" ng-set-text="script.js-143"></pre>
-<script type="text/ng-template" id="script.js-143">
+<pre class="prettyprint linenums" ng-set-text="script.js-150"></pre>
+<script type="text/ng-template" id="script.js-150">
    function Ctrl($scope) {
      $scope.list = [];
      $scope.text = 'hello';
@@ -50,8 +50,8 @@ as class<pre class="prettyprint linenums">&lt;form class="ng-submit: {expression
  </script>
 </div>
 <div class="tab-pane" title="End to end test">
-<pre class="prettyprint linenums" ng-set-text="scenario.js-145"></pre>
-<script type="text/ng-template" id="scenario.js-145">
+<pre class="prettyprint linenums" ng-set-text="scenario.js-152"></pre>
+<script type="text/ng-template" id="scenario.js-152">
   it('should check ng-submit', function() {
     expect(binding('list')).toBe('[]');
     element('.doc-example-live #submit').click();
@@ -67,5 +67,5 @@ as class<pre class="prettyprint linenums">&lt;form class="ng-submit: {expression
 </script>
 </div>
 </div><h4>Demo</h4>
-<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-144" ng-eval-javascript="script.js-143"></div></div>
+<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-151" ng-eval-javascript="script.js-150"></div></div>
 </div>

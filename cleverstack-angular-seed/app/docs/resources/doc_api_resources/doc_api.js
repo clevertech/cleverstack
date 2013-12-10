@@ -112,7 +112,7 @@ docsApp.serviceFactory.openPlunkr = function(templateMerge, formPostData, angula
   return function(content) {
     var allFiles = [].concat(content.js, content.css, content.html);
     var indexHtmlContent = '<!doctype html>\n' +
-        '<html ng-app>\n' +
+        '<html ng-app="App">\n' +
         '  <head>\n' +
         '    <script src="{{angularJSUrl}}"></script>\n' +
         '{{scriptDeps}}\n' +
@@ -151,7 +151,7 @@ docsApp.serviceFactory.openPlunkr = function(templateMerge, formPostData, angula
 
 docsApp.serviceFactory.openJsFiddle = function(templateMerge, formPostData, angularUrls) {
 
-  var HTML = '<div ng-app=\"{{module}}\">\n{{html:2}}</div>',
+  var HTML = '<div ng-app="App">\n{{html:2}}</div>',
       CSS = '</style> <!-- Ugly Hack due to jsFiddle issue: http://goo.gl/BUfGZ --> \n' +
         '{{head:0}}<style>\n​.ng-invalid { border: 1px solid red; }​\n{{css}}',
       SCRIPT = '{{script}}',

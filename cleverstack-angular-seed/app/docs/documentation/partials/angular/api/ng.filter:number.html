@@ -25,10 +25,10 @@
 </div>
 <h2 id="Example">Example</h2>
 <div class="example"><h4>Source</h4>
-<div source-edit="" source-edit-deps="angular.js script.js" source-edit-html="index.html-174" source-edit-css="" source-edit-js="script.js-173" source-edit-unit="" source-edit-scenario="scenario.js-175"></div>
+<div source-edit="" source-edit-deps="angular.js script.js" source-edit-html="index.html-181" source-edit-css="" source-edit-js="script.js-180" source-edit-unit="" source-edit-scenario="scenario.js-182"></div>
 <div class="tabbable"><div class="tab-pane" title="index.html">
-<pre class="prettyprint linenums" ng-set-text="index.html-174" ng-html-wrap=" angular.js script.js"></pre>
-<script type="text/ng-template" id="index.html-174">
+<pre class="prettyprint linenums" ng-set-text="index.html-181" ng-html-wrap=" angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-181">
   
   <div ng-controller="Ctrl">
     Enter number: <input ng-model='val'><br>
@@ -39,16 +39,16 @@
 </script>
 </div>
 <div class="tab-pane" title="script.js">
-<pre class="prettyprint linenums" ng-set-text="script.js-173"></pre>
-<script type="text/ng-template" id="script.js-173">
+<pre class="prettyprint linenums" ng-set-text="script.js-180"></pre>
+<script type="text/ng-template" id="script.js-180">
     function Ctrl($scope) {
       $scope.val = 1234.56789;
     }
   </script>
 </div>
 <div class="tab-pane" title="End to end test">
-<pre class="prettyprint linenums" ng-set-text="scenario.js-175"></pre>
-<script type="text/ng-template" id="scenario.js-175">
+<pre class="prettyprint linenums" ng-set-text="scenario.js-182"></pre>
+<script type="text/ng-template" id="scenario.js-182">
   it('should format numbers', function() {
     expect(binding('val | number')).toBe('1,234.568');
     expect(binding('val | number:0')).toBe('1,235');
@@ -64,5 +64,5 @@
 </script>
 </div>
 </div><h4>Demo</h4>
-<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-174" ng-eval-javascript="script.js-173"></div></div>
+<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-181" ng-eval-javascript="script.js-180"></div></div>
 </div>

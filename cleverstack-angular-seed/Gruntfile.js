@@ -349,6 +349,14 @@ module.exports = function (grunt) {
           ]
         }]
       }
+    },
+    concurrent: {
+        servers: {
+            tasks: ['server:web', 'server:docs'],
+            options: {
+                logConcurrentOutput: true
+            }
+        }
     }
   });
 
@@ -357,15 +365,17 @@ module.exports = function (grunt) {
   grunt.registerTask('docs', ['docular', 'docular-server']);
 
 
-  grunt.registerTask('server', [
+  grunt.registerTask('server', ['concurrent:servers']);
+  grunt.registerTask('server:web', [
     'clean:server',
     'livereload-start',
     'connect:livereload',
     'connect:test',
     'connect:dist',
-    'connect:docs',
+    // 'connect:docs',
     'watch'
   ]);
+  grunt.registerTask('server:docs', ['docular-server']);
 
   grunt.registerTask('build', [
     'clean:dist',

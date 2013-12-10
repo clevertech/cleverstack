@@ -3,9 +3,7 @@
  )</span>
 </h1>
 <div><h2 id="Description">Description</h2>
-<div class="description"><p>Custom filter to move the current user to the top of the list
-users = array of user obj's
-current = user id</p></div>
+<div class="description"><p>Custom filter to move the current user to the top of the list</p></div>
 <h2 id="Usage">Usage</h2>
 <div class="usage"><h3 id="In.HTML.Template.Binding">In HTML Template Binding</h3>
 <div class="in-html-template-binding"><code ng:non-bindable="">{{ currentUserToTop_expression | currentUserToTop }}</code>
@@ -14,4 +12,92 @@ current = user id</p></div>
 <div class="in-javascript"><code ng:non-bindable="">$filter('currentUserToTop')()</code>
 </div>
 </div>
+<h2 id="Example">Example</h2>
+<div class="example"><h4>Source</h4>
+<div source-edit="" source-edit-deps="angular.js script.js" source-edit-html="index.html" source-edit-css="style.css" source-edit-js="script.js" source-edit-unit="" source-edit-scenario="scenario.js"></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html" ng-html-wrap=" angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html">
+ 
+ 
+  <div ng-app='App'>
+      <div ng-controller="Ctrl">
+          <p>Current uid:
+              <input ng-model="user.id" />
+          </p>
+          <p>Custom sort by name, then move current to top:</p>
+          <ul>
+              <li data-ng-repeat="u in users | currentUserToTop:user.id" ng-class="{current:user.id==u.id}">{{u.id}} - {{u.username}}</li>
+          </ul>
+      </div>
+  </div>
+</script>
+</div>
+<div class="tab-pane" title="style.css">
+<pre class="prettyprint linenums" ng-set-text="style.css"></pre>
+<style type="text/css" id="style.css">
+     li.current {
+          color:red;
+      }
+ </style>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js"></pre>
+<script type="text/ng-template" id="script.js">
+  var app = angular.module('App', []);
+
+  app.filter('currentUserToTop', function () {
+      return function (users, current) {
+          var newList = [];
+          angular.forEach(users, function (u) {
+              if (u.id == current) {
+                  newList.unshift(u);
+              }
+              else {
+                  newList.push(u);
+              }
+          });
+          return newList;
+      };
+  });
+
+  function Ctrl($scope) {
+
+      $scope.user = {
+          "id": 1
+      };
+
+      $scope.users = [{
+          "id": 5,
+              "username": "sam"
+      }, {
+          "id": 6,
+              "username": "sam2"
+      }, {
+          "id": 4,
+              "username": "admin"
+      }, {
+          "id": 2,
+              "username": "user2"
+      }, {
+          "id": 3,
+              "username": "user3"
+      }, {
+          "id": 1,
+              "username": "user1"
+      }];
+  }
+ </script>
+</div>
+<div class="tab-pane" title="End to end test">
+<pre class="prettyprint linenums" ng-set-text="scenario.js"></pre>
+<script type="text/ng-template" id="scenario.js">
+  it('should be current user to top', function() {
+    element('input').value('2').enter();
+    expect('ul.users').first().field('u.id')).toEqual('2');
+  });
+</script>
+</div>
+</div><h4>Demo</h4>
+<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html" ng-eval-javascript="script.js"></div></div>
 </div>

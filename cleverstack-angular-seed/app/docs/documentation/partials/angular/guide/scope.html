@@ -36,10 +36,10 @@ point since it makes the controllers view agnostic, which greatly improves the t
 the applications.</p>
 
 <h3>Source</h3>
-<div source-edit="" source-edit-deps="angular.js script.js" source-edit-html="index.html-60" source-edit-css="" source-edit-js="script.js-59" source-edit-unit="" source-edit-scenario=""></div>
+<div source-edit="" source-edit-deps="angular.js script.js" source-edit-html="index.html-67" source-edit-css="" source-edit-js="script.js-66" source-edit-unit="" source-edit-scenario=""></div>
 <div class="tabbable"><div class="tab-pane" title="index.html">
-<pre class="prettyprint linenums" ng-set-text="index.html-60" ng-html-wrap=" angular.js script.js"></pre>
-<script type="text/ng-template" id="index.html-60">
+<pre class="prettyprint linenums" ng-set-text="index.html-67" ng-html-wrap=" angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-67">
     <div ng-controller="MyController">
       Your name:
         <input type="text" ng-model="username">
@@ -50,8 +50,8 @@ the applications.</p>
   </script>
 </div>
 <div class="tab-pane" title="script.js">
-<pre class="prettyprint linenums" ng-set-text="script.js-59"></pre>
-<script type="text/ng-template" id="script.js-59">
+<pre class="prettyprint linenums" ng-set-text="script.js-66"></pre>
+<script type="text/ng-template" id="script.js-66">
     function MyController($scope) {
       $scope.username = 'World';
 
@@ -62,7 +62,7 @@ the applications.</p>
   </script>
 </div>
 </div><h3>Demo</h3>
-<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-60" ng-eval-javascript="script.js-59"></div>
+<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-67" ng-eval-javascript="script.js-66"></div>
 
 <p>In the above example notice that the  <code class="plain">MyController</code>  assigns  <code class="plain">World</code>  to the  <code class="plain">username</code>  property of
 the scope. The scope then notifies the  <code class="plain">input</code>  of the assignment, which then renders the input
@@ -122,10 +122,10 @@ inheritance, and child scopes prototypically inherit from their parents.</p>
 <p>This example illustrates scopes in application, and prototypical inheritance of properties.</p>
 
 <h3>Source</h3>
-<div source-edit="" source-edit-deps="angular.js script.js" source-edit-html="index.html-63" source-edit-css="style.css-61" source-edit-js="script.js-62" source-edit-unit="" source-edit-scenario=""></div>
+<div source-edit="" source-edit-deps="angular.js script.js" source-edit-html="index.html-70" source-edit-css="style.css-68" source-edit-js="script.js-69" source-edit-unit="" source-edit-scenario=""></div>
 <div class="tabbable"><div class="tab-pane" title="index.html">
-<pre class="prettyprint linenums" ng-set-text="index.html-63" ng-html-wrap=" angular.js script.js"></pre>
-<script type="text/ng-template" id="index.html-63">
+<pre class="prettyprint linenums" ng-set-text="index.html-70" ng-html-wrap=" angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-70">
     <div ng-controller="EmployeeController">
       Manager: {{employee.name}} [ {{department}} ]<br>
       Reports:
@@ -140,8 +140,8 @@ inheritance, and child scopes prototypically inherit from their parents.</p>
   </script>
 </div>
 <div class="tab-pane" title="style.css">
-<pre class="prettyprint linenums" ng-set-text="style.css-61"></pre>
-<style type="text/css" id="style.css-61">
+<pre class="prettyprint linenums" ng-set-text="style.css-68"></pre>
+<style type="text/css" id="style.css-68">
     /* remove .doc-example-live in jsfiddle */
     .doc-example-live .ng-scope {
       border: 1px dashed red;
@@ -149,8 +149,8 @@ inheritance, and child scopes prototypically inherit from their parents.</p>
   </style>
 </div>
 <div class="tab-pane" title="script.js">
-<pre class="prettyprint linenums" ng-set-text="script.js-62"></pre>
-<script type="text/ng-template" id="script.js-62">
+<pre class="prettyprint linenums" ng-set-text="script.js-69"></pre>
+<script type="text/ng-template" id="script.js-69">
     function EmployeeController($scope) {
       $scope.department = 'Engineering';
       $scope.employee = {
@@ -164,7 +164,7 @@ inheritance, and child scopes prototypically inherit from their parents.</p>
   </script>
 </div>
 </div><h3>Demo</h3>
-<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-63" ng-eval-javascript="script.js-62"></div>
+<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-70" ng-eval-javascript="script.js-69"></div>
 
 <p>Notice that Angular automatically places  <code class="plain">ng-scope</code>  class on elements where scopes are
 attached. The  <code class="plain"><style></code>  definition in this example highlights in red the new scope locations. The
@@ -197,10 +197,10 @@ variable.</p></li>
 <p>Scopes can propagate events in similar fashion to DOM events. The event can be <a href="documentation/angular/api/ng.$rootScope.Scope#$broadcast"><code>broadcasted</code></a> to the scope children or <a href="documentation/angular/api/ng.$rootScope.Scope#$emit"><code>emitted</code></a> to scope parents.</p>
 
 <h3>Source</h3>
-<div source-edit="" source-edit-deps="angular.js script.js" source-edit-html="index.html-65" source-edit-css="" source-edit-js="script.js-64" source-edit-unit="" source-edit-scenario=""></div>
+<div source-edit="" source-edit-deps="angular.js script.js" source-edit-html="index.html-72" source-edit-css="" source-edit-js="script.js-71" source-edit-unit="" source-edit-scenario=""></div>
 <div class="tabbable"><div class="tab-pane" title="index.html">
-<pre class="prettyprint linenums" ng-set-text="index.html-65" ng-html-wrap=" angular.js script.js"></pre>
-<script type="text/ng-template" id="index.html-65">
+<pre class="prettyprint linenums" ng-set-text="index.html-72" ng-html-wrap=" angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-72">
     <div ng-controller="EventController">
       Root scope <tt>MyEvent</tt> count: {{count}}
       <ul>
@@ -220,8 +220,8 @@ variable.</p></li>
   </script>
 </div>
 <div class="tab-pane" title="script.js">
-<pre class="prettyprint linenums" ng-set-text="script.js-64"></pre>
-<script type="text/ng-template" id="script.js-64">
+<pre class="prettyprint linenums" ng-set-text="script.js-71"></pre>
+<script type="text/ng-template" id="script.js-71">
     function EventController($scope) {
       $scope.count = 0;
       $scope.$on('MyEvent', function() {
@@ -231,7 +231,7 @@ variable.</p></li>
   </script>
 </div>
 </div><h3>Demo</h3>
-<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-65" ng-eval-javascript="script.js-64"></div>
+<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-72" ng-eval-javascript="script.js-71"></div>
 
 <h2 id="scopelifecycle">Scope Life Cycle</h3>
 

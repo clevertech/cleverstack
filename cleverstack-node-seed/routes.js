@@ -53,7 +53,7 @@ module.exports = function(app) {
 
         /**
          * @doc function
-         * @name routes.user.actionID
+         * @name routes.user.action
          * @param {string} param_name as specified by user controller function.
          * @return {obj} as specified by user controller function.
          * @description

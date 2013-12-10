@@ -19,17 +19,17 @@ as class<pre class="prettyprint linenums">&lt;ANY class="ng-non-bindable"&gt;
 </div>
 <h2 id="Example">Example</h2>
 <div class="example"><h4>Source</h4>
-<div source-edit="" source-edit-deps="angular.js" source-edit-html="index.html-152" source-edit-css="" source-edit-js="" source-edit-unit="" source-edit-scenario="scenario.js-153"></div>
+<div source-edit="" source-edit-deps="angular.js" source-edit-html="index.html-159" source-edit-css="" source-edit-js="" source-edit-unit="" source-edit-scenario="scenario.js-160"></div>
 <div class="tabbable"><div class="tab-pane" title="index.html">
-<pre class="prettyprint linenums" ng-set-text="index.html-152" ng-html-wrap=" angular.js"></pre>
-<script type="text/ng-template" id="index.html-152">
+<pre class="prettyprint linenums" ng-set-text="index.html-159" ng-html-wrap=" angular.js"></pre>
+<script type="text/ng-template" id="index.html-159">
   <div>Normal: {{1 + 2}}</div>
   <div ng-non-bindable>Ignored: {{1 + 2}}</div>
 </script>
 </div>
 <div class="tab-pane" title="End to end test">
-<pre class="prettyprint linenums" ng-set-text="scenario.js-153"></pre>
-<script type="text/ng-template" id="scenario.js-153">
+<pre class="prettyprint linenums" ng-set-text="scenario.js-160"></pre>
+<script type="text/ng-template" id="scenario.js-160">
  it('should check ng-non-bindable', function() {
    expect(using('.doc-example-live').binding('1 + 2')).toBe('3');
    expect(using('.doc-example-live').element('div:last').text()).
@@ -38,5 +38,5 @@ as class<pre class="prettyprint linenums">&lt;ANY class="ng-non-bindable"&gt;
 </script>
 </div>
 </div><h4>Demo</h4>
-<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-152" ng-eval-javascript=""></div></div>
+<div class="well doc-example-live" ng-embed-app="" ng-set-html="index.html-159" ng-eval-javascript=""></div></div>
 </div>
