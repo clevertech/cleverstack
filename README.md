@@ -50,4 +50,5 @@ Please see the [getting started](http://cleverstack.io/getting-started/) guide, 
 You can search and install modules using the CleverStack CLI. There is also a searchable modules list on the website.
 
 Website Modules Search: http://cleverstack.io/modules
+
 Module Repos: https://github.com/cleverstack
