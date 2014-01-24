@@ -1,42 +1,53 @@
 # CleverStack
 
-![cleverstack](assets/logos/cleverstack-logo-clean.png?raw=true)
+![CleverStack](http://cleverstack.github.io/assets/img/logos/cleverstack-seed-logo-clean.png "CleverStack")
 
-Cleverstack provides you with a solid platform to develop your new AngularJS and NodeJS web applications. It makes use of a whole variety of the leading web technologies to help get your web application up and running quickly.
+<blockquote>
+A modular way to create your AngularJS & NodeJS web applications. CleverStack uses modules which contain smaller & easier to manage reusable modules of code. Getting you up and running quickly without sacrificing code quality, time and sanity.
+</blockquote>
 
-## CleverStack Command Line
 
-We're working a new modular version of CleverStack, be sure to watch this repo! Coming soon. In the meantime you can fork and use the Seeds below to create your CleverStack Web Apps or fork the demo branch of this repo and go from there.
+## CleverStack CLI
+
+![CleverStack CLI](http://cleverstack.github.io/assets/img/logos/clevertech-seed-logo-clean.png "CleverStack CLI")
+
+<blockquote>
+A command line interface (CLI) for the [CleverStack](http://cleverstack.io) ecosystem.
+</blockquote>
+
+Repo: https://github.com/CleverStack/cleverstack-cli
 
 
 ## CleverStack Angular Seed
 
-![angular](assets/logos/angular-seed-logo-clean.png)
+![CleverStack Angular Seed](http://cleverstack.github.io/assets/img/logos/angular-seed-logo-clean.png "CleverStack Angular Seed")
 
-Angular JS front-end Seed for use with CleverStack.
+<blockquote>
+CleverStack Angular Seed provides you with a cutting edge AngularJS development workflow.
+</blockquote>
 
-Angular Seed Repo: https://github.com/clevertech/cleverstack-angular-seed
+Repo: https://github.com/clevertech/cleverstack-angular-seed
 
 
 ## CleverStack Node Seed
 
-![node](assets/logos/node-seed-logo-clean.png)
+![CleverStack Node Seed](http://cleverstack.github.io/assets/img/logos/node-seed-logo-clean.png "CleverStack Node Seed")
 
-Node JS back-end Seed for use with CleverStack.
+<blockquote>
+CleverStack Node Seed provides you with a cutting edge NodeJS development workflow.
+</blockquote>
 
-Node Seed Repo: https://github.com/clevertech/cleverstack-node-seed
-
-
-## CleverStack.io Demo
-
-An online demo showcasing the best features of CleverStack and the Seeds.
-
-http://cleverstack.io
+Repo: https://github.com/clevertech/cleverstack-node-seed
 
 
-## CleverStack Wiki
+## CleverStack Documentation
 
-An online Wiki which can provide support for install, configurations and troubleshooting.
+Please see the [getting started](http://cleverstack.io/getting-started/) guide, we're upgrading our docs to be more detailed. Please open an issue if you feel the docs are lacking for something specific.
 
-http://wiki.cleverstack.io
 
+## CleverStack Modules
+
+You can search and install modules using the CleverStack CLI. There is also a searchable modules list on the website.
+
+Website Modules Search: http://cleverstack.io/modules
+Module Repos: https://github.com/cleverstack
