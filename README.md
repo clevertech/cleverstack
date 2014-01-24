@@ -1,6 +1,6 @@
 # CleverStack
 
-![CleverStack](http://cleverstack.github.io/assets/img/logos/cleverstack-seed-logo-clean.png "CleverStack")
+![CleverStack](http://cleverstack.github.io/assets/img/logos/cleverstack-logo-clean.png "CleverStack")
 
 <blockquote>
 A modular way to create your AngularJS & NodeJS web applications. CleverStack uses modules which contain smaller & easier to manage reusable modules of code. Getting you up and running quickly without sacrificing code quality, time and sanity.
