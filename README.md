@@ -6,6 +6,7 @@
 A modular way to create your AngularJS & NodeJS web applications. CleverStack uses modules which contain smaller & easier to manage reusable modules of code. Getting you up and running quickly without sacrificing code quality, time and sanity.
 </blockquote>
 
+Reporting issues: Please use the individual repos listed below to report an issue with cleverstack.
 
 ## CleverStack CLI
 
