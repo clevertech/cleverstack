@@ -27,7 +27,7 @@ Repo: https://github.com/CleverStack/cleverstack-cli
 CleverStack Angular Seed provides you with a cutting edge AngularJS development workflow.
 </blockquote>
 
-Repo: https://github.com/clevertech/cleverstack-angular-seed
+Repo: https://github.com/CleverStack/angular-seed
 
 
 ## CleverStack Node Seed
@@ -38,7 +38,7 @@ Repo: https://github.com/clevertech/cleverstack-angular-seed
 CleverStack Node Seed provides you with a cutting edge NodeJS development workflow.
 </blockquote>
 
-Repo: https://github.com/clevertech/cleverstack-node-seed
+Repo: https://github.com/CleverStack/node-seed
 
 
 ## CleverStack Documentation
